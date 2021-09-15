@@ -11,7 +11,6 @@ public class Movment : MonoBehaviour
     private bool isCeiling;
   
 
-
     public Transform groundCheck;
     public Transform ceilingCheck;
     public float speed = 0;
