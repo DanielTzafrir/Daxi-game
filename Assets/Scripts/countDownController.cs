@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CountDownController: MonoBehaviour
+public class countDownController: MonoBehaviour
 {
     public int countDownTime;
-    public Text countDownDisplay;
+    public TMPro.TextMeshProUGUI countDownDisplay;
 
     public void Start()
     {
@@ -16,7 +17,14 @@ public class CountDownController: MonoBehaviour
     {
         while (countDownTime > 0)
         {
-            countDownDisplay.text = countDownTime.ToString();
+            if(countDownTime == 2)
+            {
+                countDownDisplay.text = "Ready?";
+            }
+            else
+            {
+                countDownDisplay.text = "Set";
+            }
 
             yield return new WaitForSeconds(1f);
 
@@ -25,7 +33,7 @@ public class CountDownController: MonoBehaviour
 
         countDownDisplay.text = "GO!";
 
-        //continue the game code
+        pauseMenu.instance.Resume();
 
         yield return new WaitForSeconds(1f);
 

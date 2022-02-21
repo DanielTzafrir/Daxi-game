@@ -4,20 +4,33 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class pauseMenu : MonoBehaviour
+public class pauseMenu : MonoBehaviour 
 {
-
+    public static pauseMenu instance;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public int countDownTime;
-    public Text countDownDisplay;
+    public TMPro.TextMeshProUGUI countDownDisplay;
 
-    public void Resume1()
+    private void Awake()
     {
+        instance = this;
+    }
+    /*private void Start()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         StartCoroutine(CountDownToStart());
+        Debug.Log("7");
+    }*/
+
+    public void Begin()
+    {
+        GameIsPaused = false;
+        Time.timeScale = 1f;
     }
 
-    public void Resume2()
+    public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -43,21 +56,30 @@ public class pauseMenu : MonoBehaviour
 
     IEnumerator CountDownToStart()
     {
+        Debug.Log("2");
         while (countDownTime > 0)
         {
-            countDownDisplay.text = countDownTime.ToString();
-
+            if (countDownTime == 2)
+            {
+                Debug.Log("3");
+                countDownDisplay.text = "Ready?";
+            }
+            else
+            {
+                Debug.Log("4");
+                countDownDisplay.text = "Set";
+            }
+            Debug.Log("5");
             yield return new WaitForSeconds(1f);
 
             countDownTime--;
         }
-
+        Debug.Log("6");
         countDownDisplay.text = "GO!";
 
-        Resume2();
+        Begin();
 
         yield return new WaitForSeconds(1f);
-
         countDownDisplay.gameObject.SetActive(false);
     }
 
