@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 1665021144}
   - component: {fileID: 1665021143}
   - component: {fileID: 1665021142}
+  - component: {fileID: 1665021145}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -534,6 +535,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1665021145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665021140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0766130ae7af8834d9e4f97ac1e81839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1747640389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1067,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1773199450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1665021145}
+        m_TargetAssemblyTypeName: worldsLoadScences, Assembly-CSharp
+        m_MethodName: LoadWorld1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1773199450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,9 +1163,9 @@ RectTransform:
   m_Father: {fileID: 1446568150}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.9322501, y: 0.89474833}
-  m_AnchorMax: {x: 0.9322501, y: 0.89474833}
-  m_AnchoredPosition: {x: -2031.15, y: -1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 149.84998, y: -121}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867198668
@@ -1186,7 +1211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1867198669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1665021145}
+        m_TargetAssemblyTypeName: worldsLoadScences, Assembly-CSharp
+        m_MethodName: LoadMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1867198669
 MonoBehaviour:
   m_ObjectHideFlags: 0

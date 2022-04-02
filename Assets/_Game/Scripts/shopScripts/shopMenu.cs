@@ -7,7 +7,7 @@ public class shopMenu : MonoBehaviour
 {
     public void LoadPlay()
     {
-        SceneManager.LoadScene("lvl 1");
+        SceneManager.LoadScene("worlds");
     }
 
     public void LoadShop()
