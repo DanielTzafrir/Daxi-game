@@ -1,0 +1,907 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.15f2 (6cf78cb77498) revision 7141260'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19044.1586; Version 2009; 64bit' Language: 'en' Physical Memory: 24350 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.15f2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/danie/Daxi game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60428
+Successfully changed project path to: C:/Users/danie/Daxi game
+C:/Users/danie/Daxi game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 45.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.15f2 (6cf78cb77498)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/danie/Daxi game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x3ea0)
+    Vendor:   
+    VRAM:     12175 MB
+    Driver:   27.20.100.9664
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56404
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003231 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 43.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.183 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1183ms)
+		BeginReloadAssembly (60ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (423ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (148ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (165ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (44ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (77ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006292 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 44.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.197 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1199ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (994ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (292ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (443ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (45ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (276ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.8 MB.
+System memory in use after: 95.7 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 3.407900 ms (FindLiveObjects: 0.231900 ms CreateObjectMapping: 0.093600 ms MarkObjects: 2.957400 ms  DeleteObjects: 0.123800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/_Game/Animation/Player/Movment/defolt
+  artifactKey: Guid(4dd0fee2a53694a47877a7762b064116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/defolt using Guid(4dd0fee2a53694a47877a7762b064116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb81abe5b4aaefea3d4365ec7f92793a') in 0.010068 seconds 
+  Import took 0.014008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.779942 seconds.
+  path: Assets/_Game/Animation/Player/Movment/default
+  artifactKey: Guid(4dd0fee2a53694a47877a7762b064116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/default using Guid(4dd0fee2a53694a47877a7762b064116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '358d59b2502ffa814690cef93afebd7a') in 0.011328 seconds 
+  Import took 0.015236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.465716 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan
+  artifactKey: Guid(b56d9e19dd584b949b85f3ad2fb3e5d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan using Guid(b56d9e19dd584b949b85f3ad2fb3e5d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a3cd402207fd8742fa8b6ef6e523a1a') in 0.012983 seconds 
+  Import took 0.017381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.816732 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump
+  artifactKey: Guid(865c86f211d6d754c81a1449d9e61d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump using Guid(865c86f211d6d754c81a1449d9e61d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a58e05437aedff51364184448a54b77d') in 0.011342 seconds 
+  Import took 0.014948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.808850 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0001.png
+  artifactKey: Guid(2e291ae887f78b04994147053eaca09a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0001.png using Guid(2e291ae887f78b04994147053eaca09a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '523f6ec493f98beb403a890cab67900f') in 0.175260 seconds 
+  Import took 0.179572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0015.png
+  artifactKey: Guid(9ef530257bd15d049b3b34817234875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0015.png using Guid(9ef530257bd15d049b3b34817234875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e809906c5673b91c3be84754edb20d7') in 0.020360 seconds 
+  Import took 0.023474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0005.png
+  artifactKey: Guid(aa439c5d09c3ca74581d981aa9ad7037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0005.png using Guid(aa439c5d09c3ca74581d981aa9ad7037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca016277791d5a79ede739621172ae4') in 0.019145 seconds 
+  Import took 0.023068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0008.png
+  artifactKey: Guid(8f2251e0626d9634a8979273ab18e5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0008.png using Guid(8f2251e0626d9634a8979273ab18e5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cd4f3ad2709453fe42e1af4d45f8284') in 0.019520 seconds 
+  Import took 0.024051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0002.png
+  artifactKey: Guid(7a5f8bbf91d49e741a1589c552a3b1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0002.png using Guid(7a5f8bbf91d49e741a1589c552a3b1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efdf331282da77775aecbe0fb20ebbe0') in 0.029410 seconds 
+  Import took 0.033541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0007.png
+  artifactKey: Guid(5aeeae5808f5a14408c571fdcdb5f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0007.png using Guid(5aeeae5808f5a14408c571fdcdb5f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f70f612d19c69741569a349bb3fe5b') in 0.026297 seconds 
+  Import took 0.030804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0014.png
+  artifactKey: Guid(1494aa4321cf6f7488af15bc9c6fb6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0014.png using Guid(1494aa4321cf6f7488af15bc9c6fb6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '901663859ee312fca499b3a5d12823ff') in 0.027463 seconds 
+  Import took 0.033578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0004.png
+  artifactKey: Guid(4319294e7fa106a42addb0f658391b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0004.png using Guid(4319294e7fa106a42addb0f658391b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57f2639843fce738928e4dd1952956f4') in 0.026241 seconds 
+  Import took 0.030376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0016.png
+  artifactKey: Guid(c9d8cefa0058fdc419819800668a3256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0016.png using Guid(c9d8cefa0058fdc419819800668a3256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae4583d7fd8e6b1bae95245cb00ec8c') in 0.027925 seconds 
+  Import took 0.034451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0013.png
+  artifactKey: Guid(b36cc51e1ba56d243a66ffd0ac9f495f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0013.png using Guid(b36cc51e1ba56d243a66ffd0ac9f495f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01e4ec6131c38fb4605ce51b43c199d1') in 0.025200 seconds 
+  Import took 0.029341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0010.png
+  artifactKey: Guid(452658efaa5c91248be09621d3b45244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0010.png using Guid(452658efaa5c91248be09621d3b45244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be51db9bf7a1c54a4ecb182cd3625c4') in 0.021470 seconds 
+  Import took 0.026096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0009.png
+  artifactKey: Guid(7a799ade573b0764f864c49c480d2a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0009.png using Guid(7a799ade573b0764f864c49c480d2a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bcc0e8465cff22758f7c8b540eb7bc5') in 0.020954 seconds 
+  Import took 0.025576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0011.png
+  artifactKey: Guid(5add5060c6247fa45900ea05dc41aa79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0011.png using Guid(5add5060c6247fa45900ea05dc41aa79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97fa0b325bf4953a2c1c9b0131325eb5') in 0.019530 seconds 
+  Import took 0.024299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0012.png
+  artifactKey: Guid(a0e9da4636752bb4086b4cd7afa41921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0012.png using Guid(a0e9da4636752bb4086b4cd7afa41921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '529a1429e86629dc7f0068f76ad3c183') in 0.019508 seconds 
+  Import took 0.024420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0006.png
+  artifactKey: Guid(3f78696410a983a458428c89555afd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0006.png using Guid(3f78696410a983a458428c89555afd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea82fab5a1de61b0687fb28c599d06b') in 0.023076 seconds 
+  Import took 0.029176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0003.png
+  artifactKey: Guid(7c97e0230c00104428f2655648af36af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0003.png using Guid(7c97e0230c00104428f2655648af36af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1437e0af2405a98201873f94d91a660b') in 0.019167 seconds 
+  Import took 0.023882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.031446 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0017.png
+  artifactKey: Guid(17b21e0f0ff8db94cb3c9b64bf2daad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0017.png using Guid(17b21e0f0ff8db94cb3c9b64bf2daad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2de56315535376b264e16a63407b4a0') in 0.018340 seconds 
+  Import took 0.022567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0018.png
+  artifactKey: Guid(e5b7858b412642c44b9714eb7ed8fa34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0018.png using Guid(e5b7858b412642c44b9714eb7ed8fa34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f6e78540697c08796f9b690fee0694') in 0.024399 seconds 
+  Import took 0.028938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000474 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0019.png
+  artifactKey: Guid(33d71a8a5d07a1149ab2224b211002f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0019.png using Guid(33d71a8a5d07a1149ab2224b211002f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413d7880525e29933abb8a614c4540e6') in 0.020674 seconds 
+  Import took 0.025479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026176 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0020.png
+  artifactKey: Guid(cdd25ec03cedf47448aa19245af9d49f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0020.png using Guid(cdd25ec03cedf47448aa19245af9d49f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '734415ba98b5343f60374bff4dbf3e5e') in 0.019272 seconds 
+  Import took 0.024487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0025.png
+  artifactKey: Guid(41dd12c1fd2351b46a8743956d48ec05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0025.png using Guid(41dd12c1fd2351b46a8743956d48ec05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac55b7be05e11c798ab58846d876bfe1') in 0.025931 seconds 
+  Import took 0.029623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0024.png
+  artifactKey: Guid(fa4dbcf0b1facdf408535959833fc1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0024.png using Guid(fa4dbcf0b1facdf408535959833fc1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5587b381c396c45d3b6e6738c1d3c4c2') in 0.026101 seconds 
+  Import took 0.030389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0023.png
+  artifactKey: Guid(36dcfe95c22273e4e8730dee33732ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0023.png using Guid(36dcfe95c22273e4e8730dee33732ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057ee80ac1589dd17e4e999a7fdeb702') in 0.023606 seconds 
+  Import took 0.027541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0022.png
+  artifactKey: Guid(b0f2d845b1f77704e886009c77f4b364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0022.png using Guid(b0f2d845b1f77704e886009c77f4b364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c47b306e89d18831f2099f14b3faffe3') in 0.021299 seconds 
+  Import took 0.024924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000740 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0021.png
+  artifactKey: Guid(0f798c44d7ff1f6429757712a695ccdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0021.png using Guid(0f798c44d7ff1f6429757712a695ccdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a802bf58b0fa696399e82208c3ada47') in 0.021217 seconds 
+  Import took 0.024703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.143536 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0026.png
+  artifactKey: Guid(138523d27935abe4db9456d8a44c9f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0026.png using Guid(138523d27935abe4db9456d8a44c9f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa419a4c408f5cd2b86689428c2e902e') in 0.021080 seconds 
+  Import took 0.026358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0030.png
+  artifactKey: Guid(a40afbfd72f48424cb3a496566c00b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0030.png using Guid(a40afbfd72f48424cb3a496566c00b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c4eaeb43521a125c5d81b0148d5e682') in 0.019622 seconds 
+  Import took 0.025232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0031.png
+  artifactKey: Guid(e0f423bc541a9344ba016dfce28ff7dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0031.png using Guid(e0f423bc541a9344ba016dfce28ff7dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '028ee2ca9824de7fb31324e1f367d613') in 0.024909 seconds 
+  Import took 0.029331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0033.png
+  artifactKey: Guid(9d28128d7e627ee41a97109d4d7a91ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0033.png using Guid(9d28128d7e627ee41a97109d4d7a91ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f60b1d7e670b701b47a287c8e073302') in 0.022288 seconds 
+  Import took 0.026813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000414 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0029.png
+  artifactKey: Guid(003ed92435188a448be34261cf060a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0029.png using Guid(003ed92435188a448be34261cf060a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66002f4b0bfeaa9c90dbb9ade4858e4d') in 0.020355 seconds 
+  Import took 0.025723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0034.png
+  artifactKey: Guid(611b950414f62c34889b57e83852f927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0034.png using Guid(611b950414f62c34889b57e83852f927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd63f4ec62fad9c887146baf3d94ba11') in 0.021344 seconds 
+  Import took 0.025852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0027.png
+  artifactKey: Guid(e3c654b309767004bad1d208e1f81016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0027.png using Guid(e3c654b309767004bad1d208e1f81016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e690899b2d8c126290149858bd5de1c6') in 0.024113 seconds 
+  Import took 0.028789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0028.png
+  artifactKey: Guid(8bb724c9ebdaa0e40859dfe91d6c59b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0028.png using Guid(8bb724c9ebdaa0e40859dfe91d6c59b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cad260b212a52f00dd02ceb7cb850dac') in 0.022236 seconds 
+  Import took 0.027284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0032.png
+  artifactKey: Guid(11bcf172e7e0da449b81c8e2458da9d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0032.png using Guid(11bcf172e7e0da449b81c8e2458da9d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3271c7c689ec3b629117c2a16398d5ba') in 0.024938 seconds 
+  Import took 0.028950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6123.712811 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0001.png
+  artifactKey: Guid(2e291ae887f78b04994147053eaca09a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0001.png using Guid(2e291ae887f78b04994147053eaca09a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a184d24d4bdcf1187bbb1c85a805eb5d') in 0.029314 seconds 
+  Import took 0.035017 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0015.png
+  artifactKey: Guid(9ef530257bd15d049b3b34817234875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0015.png using Guid(9ef530257bd15d049b3b34817234875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e038de9179b52e9036799f45277f0ae') in 0.018919 seconds 
+  Import took 0.022557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0005.png
+  artifactKey: Guid(aa439c5d09c3ca74581d981aa9ad7037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0005.png using Guid(aa439c5d09c3ca74581d981aa9ad7037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1672925cd993b543001e470a629837b1') in 0.018841 seconds 
+  Import took 0.022774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0008.png
+  artifactKey: Guid(8f2251e0626d9634a8979273ab18e5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0008.png using Guid(8f2251e0626d9634a8979273ab18e5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f185efb69dffc52132cbecdd955d9c03') in 0.019311 seconds 
+  Import took 0.022404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0002.png
+  artifactKey: Guid(7a5f8bbf91d49e741a1589c552a3b1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0002.png using Guid(7a5f8bbf91d49e741a1589c552a3b1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1280f08335582af705f12ed841a75df') in 0.018414 seconds 
+  Import took 0.021487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0007.png
+  artifactKey: Guid(5aeeae5808f5a14408c571fdcdb5f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0007.png using Guid(5aeeae5808f5a14408c571fdcdb5f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a460397c637cf949d532cc5a1098697') in 0.020226 seconds 
+  Import took 0.024593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0014.png
+  artifactKey: Guid(1494aa4321cf6f7488af15bc9c6fb6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0014.png using Guid(1494aa4321cf6f7488af15bc9c6fb6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de503527c5d89147c506813c7c61536a') in 0.020932 seconds 
+  Import took 0.027282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0004.png
+  artifactKey: Guid(4319294e7fa106a42addb0f658391b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0004.png using Guid(4319294e7fa106a42addb0f658391b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0bf47267ac79b3881dea94a317a22d') in 0.021579 seconds 
+  Import took 0.026083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0016.png
+  artifactKey: Guid(c9d8cefa0058fdc419819800668a3256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0016.png using Guid(c9d8cefa0058fdc419819800668a3256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc67d0fd8e8eb382f019f01dcaaf211d') in 0.023357 seconds 
+  Import took 0.027376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0013.png
+  artifactKey: Guid(b36cc51e1ba56d243a66ffd0ac9f495f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0013.png using Guid(b36cc51e1ba56d243a66ffd0ac9f495f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b05d2916f3b807d91c4be3d2a9219b') in 0.027866 seconds 
+  Import took 0.031392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0010.png
+  artifactKey: Guid(452658efaa5c91248be09621d3b45244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0010.png using Guid(452658efaa5c91248be09621d3b45244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f4e680c2a8373c069a37c7d7131782') in 0.014813 seconds 
+  Import took 0.017795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0009.png
+  artifactKey: Guid(7a799ade573b0764f864c49c480d2a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0009.png using Guid(7a799ade573b0764f864c49c480d2a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936f8d635aada3d5607a73c10ed85722') in 0.013865 seconds 
+  Import took 0.016888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0011.png
+  artifactKey: Guid(5add5060c6247fa45900ea05dc41aa79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0011.png using Guid(5add5060c6247fa45900ea05dc41aa79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192f27267713557646a6cd861ad3e206') in 0.014352 seconds 
+  Import took 0.017424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0012.png
+  artifactKey: Guid(a0e9da4636752bb4086b4cd7afa41921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0012.png using Guid(a0e9da4636752bb4086b4cd7afa41921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd88f4b72d8367d254c719d09793eb785') in 0.018497 seconds 
+  Import took 0.021460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0006.png
+  artifactKey: Guid(3f78696410a983a458428c89555afd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0006.png using Guid(3f78696410a983a458428c89555afd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f720bd481b94f3bc241092369486213') in 0.021417 seconds 
+  Import took 0.025150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0003.png
+  artifactKey: Guid(7c97e0230c00104428f2655648af36af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0003.png using Guid(7c97e0230c00104428f2655648af36af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f24284c3d4fe7ecb1a50d1525d1757fa') in 0.019821 seconds 
+  Import took 0.026025 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.210310 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.328 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2329ms)
+		BeginReloadAssembly (241ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (20ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (66ms)
+		EndReloadAssembly (1959ms)
+			LoadAssemblies (197ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (538ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (924ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (171ms)
+				ProcessInitializeOnLoadAttributes (711ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.2 MB.
+System memory in use after: 97.2 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2564.
+Total: 7.706500 ms (FindLiveObjects: 0.318300 ms CreateObjectMapping: 0.115100 ms MarkObjects: 7.098100 ms  DeleteObjects: 0.171700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2779.586275 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0001.controller
+  artifactKey: Guid(1a705f2d165fbff439e49e9d33ec913c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Japan/jump/jump _ש___ƒ 0001.controller using Guid(1a705f2d165fbff439e49e9d33ec913c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee5a0b1d511424277a730cc4c2edbdb') in 0.112843 seconds 
+  Import took 0.120850 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014361 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.346 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2348ms)
+		BeginReloadAssembly (288ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (66ms)
+		EndReloadAssembly (1848ms)
+			LoadAssemblies (275ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (617ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (92ms)
+			SetupLoadedEditorAssemblies (686ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (177ms)
+				ProcessInitializeOnLoadAttributes (475ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.2 MB.
+System memory in use after: 97.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2568.
+Total: 4.472400 ms (FindLiveObjects: 0.236200 ms CreateObjectMapping: 0.099800 ms MarkObjects: 3.624500 ms  DeleteObjects: 0.510100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1350.377097 seconds.
+  path: Assets/_Game/Animation/Player/Movment/New Folder
+  artifactKey: Guid(f80f093275d25ce4aac5ec4b964b2c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/New Folder using Guid(f80f093275d25ce4aac5ec4b964b2c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c47344de896d516942088ec64e8a9975') in 0.024031 seconds 
+  Import took 0.031239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.853782 seconds.
+  path: Assets/_Game/Animation/Player/Movment/daxDead
+  artifactKey: Guid(f80f093275d25ce4aac5ec4b964b2c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/daxDead using Guid(f80f093275d25ce4aac5ec4b964b2c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1365916d6613f2630b3a21bf5f62397') in 0.011264 seconds 
+  Import took 0.021187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.937050 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0001.png
+  artifactKey: Guid(94d52f16ad5313149ada8b895cf18fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0001.png using Guid(94d52f16ad5313149ada8b895cf18fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b9474a7b6724d09983ed2b5a424da03') in 0.141031 seconds 
+  Import took 0.153072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004788 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0012.png
+  artifactKey: Guid(0c0d2870c66d76743919bad0a731d5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0012.png using Guid(0c0d2870c66d76743919bad0a731d5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c1fc3ce461c3cd8e4f9ebc7815d3b23') in 0.059526 seconds 
+  Import took 0.070008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0004.png
+  artifactKey: Guid(0fd4858082913e447b4295dceb76f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0004.png using Guid(0fd4858082913e447b4295dceb76f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b6d3606bf4554085c651739cc3728df') in 0.097119 seconds 
+  Import took 0.111923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0009.png
+  artifactKey: Guid(26872dbe08f6ec94b87b838fe364335c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0009.png using Guid(26872dbe08f6ec94b87b838fe364335c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6c26e98ec3a1bf5f61a225020ed696') in 0.051779 seconds 
+  Import took 0.059654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000561 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0013.png
+  artifactKey: Guid(c1e198f5f663c1746a35430582296ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0013.png using Guid(c1e198f5f663c1746a35430582296ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d027cf03fedd45631ea5f2585dd54a') in 0.050880 seconds 
+  Import took 0.060854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000460 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0016.png
+  artifactKey: Guid(243f27427fb83054b976a1faa03a10c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0016.png using Guid(243f27427fb83054b976a1faa03a10c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebf1952d1ed4fb9e5ecde95d9effb23b') in 0.045225 seconds 
+  Import took 0.054779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001898 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0014.png
+  artifactKey: Guid(3ce399f22d2c6b4488c711104bcc643c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0014.png using Guid(3ce399f22d2c6b4488c711104bcc643c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb3e3a8c24924fca24bcfaddbaf8074a') in 0.037038 seconds 
+  Import took 0.045965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000875 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0003.png
+  artifactKey: Guid(c680f52a1140e1445b795ef2dfc18a42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0003.png using Guid(c680f52a1140e1445b795ef2dfc18a42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b854f7e1108809215d9c0a1ecceb726') in 0.058542 seconds 
+  Import took 0.073622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0015.png
+  artifactKey: Guid(2a3c8c75bc5d9a4498005b8c1d8e6541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0015.png using Guid(2a3c8c75bc5d9a4498005b8c1d8e6541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627f3a3339665d11d78d87bc8cabcd43') in 0.058849 seconds 
+  Import took 0.076814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000491 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0002.png
+  artifactKey: Guid(436af90200ea08f4b984c74b63066f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0002.png using Guid(436af90200ea08f4b984c74b63066f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88ff8cc5a94b1cbb7634be4378e72d9') in 0.038111 seconds 
+  Import took 0.053231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000791 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0010.png
+  artifactKey: Guid(eecfd47a359549b4b9ea2862e821cd0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0010.png using Guid(eecfd47a359549b4b9ea2862e821cd0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9875421002fff3ea7b6d0f5134f34d8d') in 0.052465 seconds 
+  Import took 0.061673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0011.png
+  artifactKey: Guid(954757beeb5ee9a4da35d44b9edf8b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0011.png using Guid(954757beeb5ee9a4da35d44b9edf8b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a803dc41a8276e0198810db536fe775a') in 0.033566 seconds 
+  Import took 0.040763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000481 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0008.png
+  artifactKey: Guid(fd1bc7379a071524580a24f96e961271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0008.png using Guid(fd1bc7379a071524580a24f96e961271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1364248edcfdbe64bab069590598d10d') in 0.037713 seconds 
+  Import took 0.044234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0007.png
+  artifactKey: Guid(0f5012801cd21f944b99352336e9d96f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0007.png using Guid(0f5012801cd21f944b99352336e9d96f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccfc0fe065136f89942e80a042834f3d') in 0.048155 seconds 
+  Import took 0.054498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0006.png
+  artifactKey: Guid(93d537081688dfb48b227edefa2837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0006.png using Guid(93d537081688dfb48b227edefa2837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d3162c0c39d4ebdcf20cded44d6e53b') in 0.062308 seconds 
+  Import took 0.074333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000527 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0005.png
+  artifactKey: Guid(bd0cafe395796f2409d7b16f53b7169a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0005.png using Guid(bd0cafe395796f2409d7b16f53b7169a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b78f5ac43b0ec0808cea6c77a6b4f5') in 0.059334 seconds 
+  Import took 0.067099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.169168 seconds.
+  path: Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0036.png
+  artifactKey: Guid(351100f7505c5ea4298fe5965c43e407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animation/Player/Movment/Daxdead/7 Daxdead ani0036.png using Guid(351100f7505c5ea4298fe5965c43e407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1471e026630a0f80ef74f368068d7b20') in 0.038094 seconds 
+  Import took 0.045826 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017749 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.107 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2108ms)
+		BeginReloadAssembly (234ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (1759ms)
+			LoadAssemblies (199ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (569ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (82ms)
+			SetupLoadedEditorAssemblies (680ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (170ms)
+				ProcessInitializeOnLoadAttributes (475ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.3 MB.
+System memory in use after: 97.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2573.
+Total: 3.818300 ms (FindLiveObjects: 0.265900 ms CreateObjectMapping: 0.118700 ms MarkObjects: 3.311200 ms  DeleteObjects: 0.120600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

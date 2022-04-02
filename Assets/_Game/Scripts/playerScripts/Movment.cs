@@ -32,7 +32,6 @@ public class Movment : MonoBehaviour
     void Update()
     {
         MovementPlayer();
-        ani.SetTrigger("onTrap");
     }
 
     private void MovementPlayer()
@@ -86,30 +85,23 @@ public class Movment : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D collider2D)
     {
-        Debug.Log("4");
         if (traps.Contains(collider2D.gameObject))
         {
-            Debug.Log("1");
             takeDamage();
         }    
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //For the health bar
+        takeDamage();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (traps.Contains(collision.gameObject))
-        {
-            Debug.Log("3");
-            ani.SetTrigger("onTrap");
-        }
+    {    
+       ani.SetTrigger("onTrap");      
     }
     public void takeDamage()
     {
-        Debug.Log("2");
         ani.SetTrigger("onTrap");
     }
 
