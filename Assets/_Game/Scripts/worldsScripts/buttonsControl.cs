@@ -5,21 +5,34 @@ using UnityEngine.UI;
 
 public class buttonsControl : MonoBehaviour
 {
-    public Button[] worldsButton;
-    
-    private bool[] lockworlds;
+    public Button worldsButton;
+    public GameObject lockMask;
+    public GameObject TitleImg;
+    public bool lockworlds;
+
+    private bool wasIn = false;
     void Start()
     {
-        
+        if (lockworlds)
+        {
+            TitleImg.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
-        
+        if (checkFinnishWorld1() && wasIn)
+        {
+            lockworlds = true;
+            TitleImg.gameObject.SetActive(true);
+            lockMask.gameObject.SetActive(false);
+            wasIn = false;
+        }
     }
 
-    private bool checkworld(int num)
+    public bool checkFinnishWorld1()
     {
-        return lockworlds[num];
-    }
+        return true;
+    } 
+
 }
