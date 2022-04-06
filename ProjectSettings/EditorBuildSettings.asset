@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/worlds.unity
     guid: 8588305f6905ed84ba742d0367cc8216
+  - enabled: 1
+    path: Assets/_Game/Scenes/lvls world 1.unity
+    guid: 8d7fb086612d4f5488fc0ac01c86710d
   m_configObjects: {}

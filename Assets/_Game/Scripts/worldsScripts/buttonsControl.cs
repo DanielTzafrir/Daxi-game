@@ -5,32 +5,52 @@ using UnityEngine.UI;
 
 public class buttonsControl : MonoBehaviour
 {
-    public Button worldsButton;
-    public GameObject lockMask;
-    public GameObject TitleImg;
-    public bool lockworlds;
+    public Button world2Button;
+    public GameObject lockMaskWorld2;
+    public GameObject TitleImgWorld2;
+    public Button world3Button;
+    public GameObject lockMaskWorld3;
+    public GameObject TitleImgWorld3;
 
-    private bool wasIn = false;
+    private bool wasIn1 = true;
+    private bool wasIn2 = true;
     void Start()
     {
-        if (lockworlds)
+        if (!wasIn1)
         {
-            TitleImg.gameObject.SetActive(false);
+            TitleImgWorld2.gameObject.SetActive(false);
+            world2Button.interactable = false;
+        }
+        if (!wasIn2)
+        {
+            TitleImgWorld3.gameObject.SetActive(false);
+            world3Button.interactable = false;
         }
     }
 
     void Update()
     {
-        if (checkFinnishWorld1() && wasIn)
+        if (checkFinnishWorld1() && wasIn1)
         {
-            lockworlds = true;
-            TitleImg.gameObject.SetActive(true);
-            lockMask.gameObject.SetActive(false);
-            wasIn = false;
+            TitleImgWorld2.gameObject.SetActive(true);
+            lockMaskWorld2.gameObject.SetActive(false);
+            world2Button.interactable = true;
+            wasIn1 = false;
+        }
+        if (checkFinnishWorld2() && wasIn2)
+        {
+            TitleImgWorld3.gameObject.SetActive(true);
+            lockMaskWorld3.gameObject.SetActive(false);
+            world3Button.interactable = true;
+            wasIn2 = false;
         }
     }
 
     public bool checkFinnishWorld1()
+    {
+        return true;
+    } 
+    public bool checkFinnishWorld2()
     {
         return true;
     } 

@@ -8,7 +8,7 @@ public class worldsLoadScences : MonoBehaviour
 {
     public void LoadWorld1()
     {
-        SceneManager.LoadScene("lvl 1");
+        SceneManager.LoadScene("lvls world 1");
     }
     public void LoadMain()
     {
