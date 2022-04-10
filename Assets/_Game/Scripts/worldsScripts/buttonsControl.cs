@@ -12,8 +12,8 @@ public class buttonsControl : MonoBehaviour
     public GameObject lockMaskWorld3;
     public GameObject TitleImgWorld3;
 
-    private bool wasIn1 = true;
-    private bool wasIn2 = true;
+    private bool wasIn1 = false;
+    private bool wasIn2 = false;
     void Start()
     {
         if (!wasIn1)
