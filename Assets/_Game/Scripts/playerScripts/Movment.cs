@@ -45,7 +45,6 @@ public class Movment : MonoBehaviour
         {
             horizontalMove = speed;
         }
-        
     }
 
     public void jumpButton()
@@ -55,32 +54,32 @@ public class Movment : MonoBehaviour
         
         if (isGrounded && !isCeiling)
         {
+            StartCoroutine(ExampleCoroutine());
             ani.SetTrigger("jump");
-            rb.velocity = Vector2.up * jumpSpeed;
-           
         }
     }
 
+    //wait in jump bcz of the animation
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rb.velocity = Vector2.up * jumpSpeed;
+    }
     public void holdingSlideButton()
     {
-        ani.SetTrigger("press_slide");
-        rb.velocity = Vector2.down * slideSpeed;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
+
+        if (isGrounded)
+        {
+            ani.SetTrigger("press_slide");
+            rb.velocity = Vector2.down * slideSpeed;
+        }
     }
     
     public void notHoldingSlideButton()
     {
         ani.SetTrigger("no_press_slide");
         rb.velocity = Vector2.down * slideSpeed;
-    }
-    public void slideButton()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
-
-        if (isGrounded)
-        {
-            ani.SetTrigger("slide");
-            rb.velocity = Vector2.down * slideSpeed;
-        }
     }
 
     private void OnTriggerEnter2D (Collider2D collider2D)
@@ -110,4 +109,5 @@ public class Movment : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
     }
+
 }
