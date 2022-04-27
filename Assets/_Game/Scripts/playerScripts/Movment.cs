@@ -10,28 +10,61 @@ public class Movment : MonoBehaviour
     private bool isGrounded;
     private bool isCeiling;
     private bool isInfrontAWall;
+    private bool isOnSpring;
+    private bool springJumping = false;
+    private bool springSwitch;
     private float stopRun = 0;
 
     public Transform groundCheck;
     public Transform ceilingCheck;
     public Transform WallCheck;
     public Transform WallCheck2;
+    public Transform springCheck;
+    public Transform springCheck2;
     public float speed = 0;
     public float jumpSpeed = 10;
     public float slideSpeed = 10;
     public List<GameObject> traps;
     public LayerMask grouneLayer;
+    public LayerMask playerLayer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+
     }
 
     
     void Update()
     {
         MovementPlayer();
+        //spring up
+        isOnSpring = Physics2D.OverlapCircle(springCheck.position, 0.2f, playerLayer) || Physics2D.OverlapCircle(springCheck2.position, 0.2f, playerLayer);
+        if (isOnSpring)
+        {
+            spring();
+            springJumping = true;
+            Debug.Log("1");
+        }
+
+        if (springJumping)
+        {
+            Debug.Log("2");
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
+            if (rb.velocity.y < 0)
+            {
+                springDown();
+                Debug.Log("3");
+            }
+
+            if (isGrounded)
+            {
+                Debug.Log("4");
+                onGround();
+                springJumping = false;
+            }
+        }
     }
 
     private void MovementPlayer()
@@ -54,16 +87,10 @@ public class Movment : MonoBehaviour
         
         if (isGrounded && !isCeiling)
         {
-            StartCoroutine(ExampleCoroutine());
+            
             ani.SetTrigger("jump");
+            rb.velocity = Vector2.up * jumpSpeed;
         }
-    }
-
-    //wait in jump bcz of the animation
-    IEnumerator ExampleCoroutine()
-    {
-        yield return new WaitForSeconds(0.5f);
-        rb.velocity = Vector2.up * jumpSpeed;
     }
     public void holdingSlideButton()
     {
@@ -104,7 +131,19 @@ public class Movment : MonoBehaviour
         ani.SetTrigger("onTrap");
     }
 
+    public void spring()
+    {
+        ani.SetTrigger("spring");
+    }
 
+    public void springDown()
+    {
+        ani.SetTrigger("switchSpring");
+    }
+    public void onGround()
+    {
+        ani.SetTrigger("onground");
+    }
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
