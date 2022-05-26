@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movment : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Movment : MonoBehaviour
     private bool springJumping = false;
     private bool springSwitch;
     private float stopRun = 0;
+    [SerializeField] private GameObject shield;
 
     public Transform groundCheck;
     public Transform ceilingCheck;
@@ -35,7 +37,6 @@ public class Movment : MonoBehaviour
 
     }
 
-    
     void Update()
     {
         MovementPlayer();
@@ -45,28 +46,32 @@ public class Movment : MonoBehaviour
         {
             spring();
             springJumping = true;
-            Debug.Log("1");
         }
 
         if (springJumping)
         {
-            Debug.Log("2");
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
-            if (rb.velocity.y < 0)
-            {
-                springDown();
-                Debug.Log("3");
-            }
-
-            if (isGrounded)
-            {
-                Debug.Log("4");
-                onGround();
-                springJumping = false;
-            }
+            StartCoroutine(waitASec());            
         }
     }
 
+    IEnumerator waitASec()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
+
+        if (rb.velocity.y < 0)
+        {
+            springDown();
+
+        }
+
+        if (isGrounded)
+        {
+            onGround();
+            springJumping = false;
+
+        }
+    }
     private void MovementPlayer()
     {
         isInfrontAWall = Physics2D.OverlapCircle(WallCheck.position, 0.2f, grouneLayer) || Physics2D.OverlapCircle(WallCheck2.position, 0.2f, grouneLayer);
@@ -111,7 +116,7 @@ public class Movment : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D collider2D)
     {
-        if (traps.Contains(collider2D.gameObject))
+        if (traps.Contains(collider2D.gameObject) && !shield.activeSelf)
         {
             takeDamage();
         }    
@@ -119,12 +124,18 @@ public class Movment : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        takeDamage();
+        if (!shield.activeSelf)
+        {
+            takeDamage();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-    {    
-       ani.SetTrigger("onTrap");      
+    {
+        if (!shield.activeSelf)
+        {
+            ani.SetTrigger("onTrap");
+        }
     }
     public void takeDamage()
     {
@@ -148,5 +159,4 @@ public class Movment : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
     }
-
 }
