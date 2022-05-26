@@ -14,11 +14,14 @@ public class ButtonPower : MonoBehaviour
     [SerializeField] private Image power2Mask;
     [SerializeField] private Image power3Mask;
 
+    private Animator ani;
     private float startTimeOfMask1 = 0;
     private float startTimeOfMask2 = 0;
     private float startTimeOfMask3 = 0;
     private void Start()
     {
+        ani = GetComponent<Animator>();
+
         power1Mask.enabled = false;
         power2Mask.enabled = false;
         power3Mask.enabled = false;
@@ -32,6 +35,8 @@ public class ButtonPower : MonoBehaviour
             if (power1.GetComponent<Image>().sprite.name == "Gum button")
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
+                ani.SetTrigger("gum start");
+                gameObject.GetComponent<Movment>().Gum = true;
                 Debug.Log("gum");
                 maskPower1();
             }
@@ -59,6 +64,8 @@ public class ButtonPower : MonoBehaviour
             if (power2.GetComponent<Image>().sprite.name == "Gum button")
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
+                ani.SetTrigger("gum start");
+                gameObject.GetComponent<Movment>().Gum = true;
                 Debug.Log("gum");
                 maskPower2();
 
@@ -88,6 +95,8 @@ public class ButtonPower : MonoBehaviour
             if (power3.GetComponent<Image>().sprite.name == "Gum button")
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
+                ani.SetTrigger("gum start");
+                gameObject.GetComponent<Movment>().Gum = true;
                 Debug.Log("gum");
                 maskPower3();
             }
@@ -110,21 +119,24 @@ public class ButtonPower : MonoBehaviour
     }
     public void afterPressingPower1()
     {
+        Debug.Log("after power 1" + power1.GetComponent<Image>().sprite.name);
+        if (power1.GetComponent<Image>().sprite.name == "Gum button")
+        {
+            gameObject.GetComponent<Movment>().Gum = true;
+        }
+
         startTimeOfMask1 = 0;
         if (power2.gameObject.activeSelf)
         {
             power1.GetComponent<Image>().sprite = power2.GetComponent<Image>().sprite;
-            Debug.Log("power 3 active: " + power3.gameObject.activeSelf);
-            Debug.Log("power 3 image: " + power3.GetComponent<Image>().sprite);
+
             if (power3.gameObject.activeSelf)
             {
                 power2.GetComponent<Image>().sprite = power3.GetComponent<Image>().sprite;
-                Debug.Log("power 2 image: " + power2.GetComponent<Image>().sprite);
                 power3.gameObject.SetActive(false);
             }
             else
             {
-                Debug.Log("2 false A");
                 power2.gameObject.SetActive(false);
             }
         }
@@ -136,6 +148,13 @@ public class ButtonPower : MonoBehaviour
 
     public void afterPressingPower2()
     {
+        Debug.Log("after power 2: " + power2.GetComponent<Image>().sprite.name);
+
+        if (power2.GetComponent<Image>().sprite.name == "Gum button")
+        {
+            gameObject.GetComponent<Movment>().Gum = true;
+        }
+
         startTimeOfMask2 = 0;
         if (power3.gameObject.activeSelf)
         {
@@ -150,6 +169,12 @@ public class ButtonPower : MonoBehaviour
 
     public void afterPressingPower3()
     {
+        Debug.Log("after power 3" + power3.GetComponent<Image>().sprite.name);
+
+        if (power3.GetComponent<Image>().sprite.name == "Gum button")
+        {
+            gameObject.GetComponent<Movment>().Gum = true;
+        }
         startTimeOfMask3 = 0;
         power3.gameObject.SetActive(false);
     }

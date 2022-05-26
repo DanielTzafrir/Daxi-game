@@ -14,7 +14,9 @@ public class Movment : MonoBehaviour
     private bool isOnSpring;
     private bool springJumping = false;
     private bool springSwitch;
+    private bool changedRBGum = false;
     private float stopRun = 0;
+    private bool gum = false;
     [SerializeField] private GameObject shield;
 
     public Transform groundCheck;
@@ -92,16 +94,34 @@ public class Movment : MonoBehaviour
         
         if (isGrounded && !isCeiling)
         {
-            
-            ani.SetTrigger("jump");
-            rb.velocity = Vector2.up * jumpSpeed;
+            if (!gum)
+            {
+                ani.SetTrigger("jump");
+                rb.velocity = Vector2.up * jumpSpeed;
+            }
+        }
+    }
+
+    public void gumUp()
+    {
+        if (gum)
+        {
+            rb.gravityScale -= 0.2f;
+        }
+    }
+
+    public void gumDown()
+    {
+        if (gum)
+        {
+            rb.gravityScale += 0.2f;
         }
     }
     public void holdingSlideButton()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
 
-        if (isGrounded)
+        if (isGrounded && !gum)
         {
             ani.SetTrigger("press_slide");
             rb.velocity = Vector2.down * slideSpeed;
@@ -110,8 +130,11 @@ public class Movment : MonoBehaviour
     
     public void notHoldingSlideButton()
     {
-        ani.SetTrigger("no_press_slide");
-        rb.velocity = Vector2.down * slideSpeed;
+        if (!gum)
+        {
+            ani.SetTrigger("no_press_slide");
+            rb.velocity = Vector2.down * slideSpeed;
+        }
     }
 
     private void OnTriggerEnter2D (Collider2D collider2D)
@@ -132,31 +155,71 @@ public class Movment : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!shield.activeSelf)
+        if (!shield.activeSelf && !gum)
         {
             ani.SetTrigger("onTrap");
         }
     }
     public void takeDamage()
     {
-        ani.SetTrigger("onTrap");
+        if (!gum)
+        {
+            ani.SetTrigger("onTrap");
+        }
     }
 
     public void spring()
     {
-        ani.SetTrigger("spring");
+        if (!gum)
+        {
+            ani.SetTrigger("spring");
+        }
     }
 
     public void springDown()
     {
-        ani.SetTrigger("switchSpring");
+        if (!gum)
+        {
+            ani.SetTrigger("switchSpring");
+        }
     }
     public void onGround()
     {
-        ani.SetTrigger("onground");
+        if (!gum)
+        {
+            ani.SetTrigger("onground");
+        }
     }
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
+        if (gum && !changedRBGum)
+        {
+            changedRBGum = true;
+            rb.gravityScale = 0.5f;
+            StartCoroutine(wait15sec());
+        }
+        else if (!gum)
+        {
+            changedRBGum = false;
+            rb.gravityScale = 2.3f;
+        }
+    }
+    public bool Gum
+    {
+        get
+        {
+            return this.gum;
+        }
+        set
+        {
+            gum = value;
+        }
+    }
+
+    IEnumerator wait15sec()
+    {
+        yield return new WaitForSeconds(15);
+        gum = false;
     }
 }
