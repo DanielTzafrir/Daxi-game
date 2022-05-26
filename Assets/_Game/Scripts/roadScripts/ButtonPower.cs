@@ -10,32 +10,45 @@ public class ButtonPower : MonoBehaviour
     [SerializeField] private Button power2;
     [SerializeField] private Button power3;
     [SerializeField] private GameObject shield;
+    [SerializeField] private Image power1Mask;
+    [SerializeField] private Image power2Mask;
+    [SerializeField] private Image power3Mask;
 
+    private float startTimeOfMask1 = 0;
+    private float startTimeOfMask2 = 0;
+    private float startTimeOfMask3 = 0;
+    private void Start()
+    {
+        power1Mask.enabled = false;
+        power2Mask.enabled = false;
+        power3Mask.enabled = false;
+    }
     public void usePower1()
     {
         
         if (power1.GetComponent<Image>().sprite.name != "power")
         {
+
             if (power1.GetComponent<Image>().sprite.name == "Gum button")
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 Debug.Log("gum");
+                maskPower1();
             }
             else if (power1.GetComponent<Image>().sprite.name == "Shield button")
             {
                 // activate the shield for 15 sec.
                 shield.SetActive(true);
                 StartCoroutine(waitShield());
+                maskPower1();
                 // the character is immune while has a shield. taken care of in the Movment class. 
             }
             else if (power1.GetComponent<Image>().sprite.name == "Board button")
             {
                 //throw a board under Daxi
                 Debug.Log("board");
-
+                afterPressingPower1();
             }
-
-            afterPressingPower1();
         }
     }
 
@@ -47,6 +60,7 @@ public class ButtonPower : MonoBehaviour
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 Debug.Log("gum");
+                maskPower2();
 
             }
             else if (power2.GetComponent<Image>().sprite.name == "Shield button")
@@ -54,6 +68,7 @@ public class ButtonPower : MonoBehaviour
                 // activate the shield for 15 sec.
                 shield.SetActive(true);
                 StartCoroutine(waitShield());
+                maskPower2();
                 // the character is immune while has a shield. taken care of in the Movment class.
 
             }
@@ -61,10 +76,8 @@ public class ButtonPower : MonoBehaviour
             {
                 //throw a board under Daxi
                 Debug.Log("board");
-
+                afterPressingPower2();
             }
-
-            afterPressingPower2();
         }
     }
 
@@ -76,13 +89,14 @@ public class ButtonPower : MonoBehaviour
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 Debug.Log("gum");
-
+                maskPower3();
             }
             else if (power3.GetComponent<Image>().sprite.name == "Shield button")
             {
                 // activate the shield for 15 sec.
                 shield.SetActive(true);
                 StartCoroutine(waitShield());
+                maskPower3();
                 // the character is immune while has a shield. taken care of in the Movment class.
 
             }
@@ -90,25 +104,45 @@ public class ButtonPower : MonoBehaviour
             {
                 //throw a board under Daxi
                 Debug.Log("board");
-
+                afterPressingPower3();
             }
-
-            afterPressingPower3();
         }
     }
     public void afterPressingPower1()
     {
-        power1.GetComponent<Image>().sprite = defaultPowerIm;
+        startTimeOfMask1 = 0;
+        if (power2.gameObject.activeSelf)
+        {
+            power1.GetComponent<Image>().sprite = power2.GetComponent<Image>().sprite;
+            Debug.Log("power 3 active: " + power3.gameObject.activeSelf);
+            Debug.Log("power 3 image: " + power3.GetComponent<Image>().sprite);
+            if (power3.gameObject.activeSelf)
+            {
+                power2.GetComponent<Image>().sprite = power3.GetComponent<Image>().sprite;
+                Debug.Log("power 2 image: " + power2.GetComponent<Image>().sprite);
+                power3.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("2 false A");
+                power2.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            power1.GetComponent<Image>().sprite = defaultPowerIm;
+        }
     }
 
     public void afterPressingPower2()
     {
+        startTimeOfMask2 = 0;
         if (power3.gameObject.activeSelf)
         {
             power2.GetComponent<Image>().sprite = power3.GetComponent<Image>().sprite;
             power3.gameObject.SetActive(false);
         }
-        else
+        else if (power2Mask.fillAmount == 1)
         {
             power2.gameObject.SetActive(false);
         }
@@ -116,12 +150,90 @@ public class ButtonPower : MonoBehaviour
 
     public void afterPressingPower3()
     {
+        startTimeOfMask3 = 0;
         power3.gameObject.SetActive(false);
     }
 
+    public void maskPower1()
+    {
+        power1Mask.enabled = true;
+        power1Mask.sprite = power1.image.sprite;
+        power1Mask.fillAmount = 0f;
+        StartCoroutine(ChangesFillAmount1(15));
+    }
+    public void maskPower2()
+    {
+        power2Mask.enabled = true;
+        power2Mask.sprite = power2.image.sprite;
+        power2Mask.fillAmount = 0f;
+        StartCoroutine(ChangesFillAmount2(15));
+    }public void maskPower3()
+    {
+        power3Mask.enabled = true;
+        power3Mask.sprite = power3.image.sprite;
+        power3Mask.fillAmount = 0f;
+        StartCoroutine(ChangesFillAmount3(15));
+    }
     IEnumerator waitShield()
     {
         yield return new WaitForSeconds(15);
         shield.SetActive(false);
+        //remove the imunne
+    }
+    IEnumerator ChangesFillAmount1(float duration)
+    {
+
+        while (startTimeOfMask1 < duration)
+        {
+            startTimeOfMask1 += Time.deltaTime;
+            power1Mask.fillAmount = Mathf.Lerp(0, 1, startTimeOfMask1 / duration);
+            yield return null;
+        }
+
+        power1Mask.enabled = false;
+        afterPressingPower1();
+    }
+    IEnumerator ChangesFillAmount2(float duration)
+    {
+
+        while (startTimeOfMask2 < duration && power1.image.sprite != power2Mask.sprite)
+        {
+            startTimeOfMask2 += Time.deltaTime;
+            power2Mask.fillAmount = Mathf.Lerp(0, 1, startTimeOfMask2 / duration);
+            yield return null;
+        }
+        if (power1.image.sprite == power2Mask.sprite)
+        {
+
+            power1Mask.enabled = true;
+            power1Mask.sprite = power2Mask.sprite;
+            power1Mask.fillAmount = Mathf.Lerp(power2Mask.fillAmount, 1, startTimeOfMask2 / duration);
+            startTimeOfMask1 = startTimeOfMask2;
+            startTimeOfMask2 = 0;
+            StartCoroutine(ChangesFillAmount1(15));
+        }
+        power2Mask.enabled = false;
+        afterPressingPower2();
+    }
+    IEnumerator ChangesFillAmount3(float duration)
+    {
+        while (startTimeOfMask3 < duration && power2.image.sprite != power3Mask.sprite)
+        {
+            startTimeOfMask3 += Time.deltaTime;
+            power3Mask.fillAmount = Mathf.Lerp(0, 1, startTimeOfMask3 / duration);
+            yield return null;
+        }
+
+        if (power2.image.sprite == power3Mask.sprite)
+        {
+            power2Mask.enabled = true;
+            power2Mask.sprite = power3Mask.sprite;
+            power2Mask.fillAmount = Mathf.Lerp(power3Mask.fillAmount, 1, startTimeOfMask3 / duration);
+            startTimeOfMask2 = startTimeOfMask3;
+            startTimeOfMask3 = 0;
+            StartCoroutine(ChangesFillAmount2(15));
+        }
+        power3Mask.enabled = false;
+        afterPressingPower3();
     }
 }

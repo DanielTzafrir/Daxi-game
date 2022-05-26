@@ -32,22 +32,23 @@ public class powerUp : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        RandomPower();
         if (!gameObject.GetComponentInParent<BoolPowers>().Power1)
         {
-
+            RandomPower();
             ActivateForPower1();
             gameObject.GetComponentInParent<BoolPowers>().Power1 = true;
 
         }
         else if (!gameObject.GetComponentInParent<BoolPowers>().Power2)
         {
+            RandomPower();
             ActivateForPower2();
             gameObject.GetComponentInParent<BoolPowers>().Power2 = true;
 
         }
         else if (!gameObject.GetComponentInParent<BoolPowers>().Power3)
         {
+            gameObject.GetComponentInParent<BoolPowers>().Random = TheLastPower();
             ActivateForPower3();
             gameObject.GetComponentInParent<BoolPowers>().Power3 = true;
 
@@ -132,5 +133,42 @@ public class powerUp : MonoBehaviour
             gameObject.GetComponentInParent<BoolPowers>().Random = Random.Range(0, 3);
         }
 
+    }
+
+    public int TheLastPower()
+    {
+        if (powerbutton1.GetComponent<Image>().sprite.name == "Gum button")
+        {
+            if (powerbutton2.GetComponent<Image>().sprite.name == "Shield button")
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        else if (powerbutton1.GetComponent<Image>().sprite.name == "Shield button")
+        {
+            if (powerbutton2.GetComponent<Image>().sprite.name == "Gum button")
+            {
+                return 2;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        else
+        {
+            if (powerbutton2.GetComponent<Image>().sprite.name == "Gum button")
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
