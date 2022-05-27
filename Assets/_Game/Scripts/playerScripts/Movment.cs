@@ -159,11 +159,12 @@ public class Movment : MonoBehaviour
     {
         if (!shield.activeSelf && !gum)
         {
-            ani.SetTrigger("onTrap");
+            takeDamage();
         }
     }
     public void takeDamage()
     {
+        //take damage = lose life, after that imuune for 3 secs.
         if (!gum)
         {
             ani.SetTrigger("onTrap");

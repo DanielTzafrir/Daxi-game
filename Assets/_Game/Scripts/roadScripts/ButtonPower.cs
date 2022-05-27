@@ -63,11 +63,11 @@ public class ButtonPower : MonoBehaviour
         {
             if (power2.GetComponent<Image>().sprite.name == "Gum button")
             {
-                //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
+                //activate animation of gum. 
                 ani.SetTrigger("gum start");
                 gameObject.GetComponent<Movment>().Gum = true;
                 maskPower2();
-
+                //change the rigidBuddy for 15 sec. can be controlled by the up and down buttons (= taken care of in the Movment class).
             }
             else if (power2.GetComponent<Image>().sprite.name == "Shield button")
             {
@@ -75,7 +75,7 @@ public class ButtonPower : MonoBehaviour
                 shield.SetActive(true);
                 StartCoroutine(waitShield());
                 maskPower2();
-                // the character is immune while has a shield. taken care of in the Movment class.
+                // the character is immune while has a shield (= taken care of in the Movment class).
 
             }
             else if (power2.GetComponent<Image>().sprite.name == "Board button")
