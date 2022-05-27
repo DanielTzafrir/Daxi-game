@@ -13,11 +13,13 @@ public class ButtonPower : MonoBehaviour
     [SerializeField] private Image power1Mask;
     [SerializeField] private Image power2Mask;
     [SerializeField] private Image power3Mask;
+    [SerializeField] private GameObject board;
 
     private Animator ani;
     private float startTimeOfMask1 = 0;
     private float startTimeOfMask2 = 0;
     private float startTimeOfMask3 = 0;
+
     private void Start()
     {
         ani = GetComponent<Animator>();
@@ -34,15 +36,12 @@ public class ButtonPower : MonoBehaviour
 
             if (power1.GetComponent<Image>().sprite.name == "Gum button")
             {
-                //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 ani.SetTrigger("gum start");
                 gameObject.GetComponent<Movment>().Gum = true;
-                Debug.Log("gum");
                 maskPower1();
             }
             else if (power1.GetComponent<Image>().sprite.name == "Shield button")
             {
-                // activate the shield for 15 sec.
                 shield.SetActive(true);
                 StartCoroutine(waitShield());
                 maskPower1();
@@ -51,6 +50,7 @@ public class ButtonPower : MonoBehaviour
             else if (power1.GetComponent<Image>().sprite.name == "Board button")
             {
                 //throw a board under Daxi
+                useBoard();
                 Debug.Log("board");
                 afterPressingPower1();
             }
@@ -66,7 +66,6 @@ public class ButtonPower : MonoBehaviour
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 ani.SetTrigger("gum start");
                 gameObject.GetComponent<Movment>().Gum = true;
-                Debug.Log("gum");
                 maskPower2();
 
             }
@@ -82,6 +81,7 @@ public class ButtonPower : MonoBehaviour
             else if (power2.GetComponent<Image>().sprite.name == "Board button")
             {
                 //throw a board under Daxi
+                useBoard();
                 Debug.Log("board");
                 afterPressingPower2();
             }
@@ -97,7 +97,6 @@ public class ButtonPower : MonoBehaviour
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 ani.SetTrigger("gum start");
                 gameObject.GetComponent<Movment>().Gum = true;
-                Debug.Log("gum");
                 maskPower3();
             }
             else if (power3.GetComponent<Image>().sprite.name == "Shield button")
@@ -112,14 +111,18 @@ public class ButtonPower : MonoBehaviour
             else if (power3.GetComponent<Image>().sprite.name == "Board button")
             {
                 //throw a board under Daxi
+                useBoard();
                 Debug.Log("board");
                 afterPressingPower3();
             }
         }
     }
+    public void useBoard()
+    {
+        GameObject boardObj = Instantiate(board, transform);
+    }
     public void afterPressingPower1()
     {
-        Debug.Log("after power 1" + power1.GetComponent<Image>().sprite.name);
         if (power1.GetComponent<Image>().sprite.name == "Gum button")
         {
             gameObject.GetComponent<Movment>().Gum = true;
@@ -148,7 +151,6 @@ public class ButtonPower : MonoBehaviour
 
     public void afterPressingPower2()
     {
-        Debug.Log("after power 2: " + power2.GetComponent<Image>().sprite.name);
 
         if (power2.GetComponent<Image>().sprite.name == "Gum button")
         {
@@ -169,7 +171,6 @@ public class ButtonPower : MonoBehaviour
 
     public void afterPressingPower3()
     {
-        Debug.Log("after power 3" + power3.GetComponent<Image>().sprite.name);
 
         if (power3.GetComponent<Image>().sprite.name == "Gum button")
         {

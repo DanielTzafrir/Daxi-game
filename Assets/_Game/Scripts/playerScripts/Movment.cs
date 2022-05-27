@@ -18,19 +18,21 @@ public class Movment : MonoBehaviour
     private float stopRun = 0;
     private bool gum = false;
     [SerializeField] private GameObject shield;
+    [SerializeField] private float gravityUpGum;
+    [SerializeField] private float gravityDownGum;
 
-    public Transform groundCheck;
-    public Transform ceilingCheck;
-    public Transform WallCheck;
-    public Transform WallCheck2;
-    public Transform springCheck;
-    public Transform springCheck2;
-    public float speed = 0;
-    public float jumpSpeed = 10;
-    public float slideSpeed = 10;
-    public List<GameObject> traps;
-    public LayerMask grouneLayer;
-    public LayerMask playerLayer;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform ceilingCheck;
+    [SerializeField] private Transform WallCheck;
+    [SerializeField] private Transform WallCheck2;
+    [SerializeField] private Transform springCheck;
+    [SerializeField] private Transform springCheck2;
+    [SerializeField] private float speed = 0;
+    [SerializeField] private float jumpSpeed = 10;
+    [SerializeField] private float slideSpeed = 10;
+    [SerializeField] private List<GameObject> traps;
+    [SerializeField] private LayerMask grouneLayer;
+    [SerializeField] private LayerMask playerLayer;
 
     void Start()
     {
@@ -106,7 +108,7 @@ public class Movment : MonoBehaviour
     {
         if (gum)
         {
-            rb.gravityScale -= 0.2f;
+            rb.gravityScale -= gravityUpGum;
         }
     }
 
@@ -114,7 +116,7 @@ public class Movment : MonoBehaviour
     {
         if (gum)
         {
-            rb.gravityScale += 0.2f;
+            rb.gravityScale += gravityDownGum;
         }
     }
     public void holdingSlideButton()
@@ -196,7 +198,7 @@ public class Movment : MonoBehaviour
         if (gum && !changedRBGum)
         {
             changedRBGum = true;
-            rb.gravityScale = 0.5f;
+            rb.gravityScale = -0.5f;
             StartCoroutine(wait15sec());
         }
         else if (!gum)

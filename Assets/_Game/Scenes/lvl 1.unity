@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 1292443109}
+  gravityUpGum: 0.2
+  gravityDownGum: 0.2
   groundCheck: {fileID: 828627066}
   ceilingCheck: {fileID: 903899361}
   WallCheck: {fileID: 1291123410}
@@ -455,6 +457,7 @@ MonoBehaviour:
   power1Mask: {fileID: 1945094544}
   power2Mask: {fileID: 898190332}
   power3Mask: {fileID: 11843240}
+  board: {fileID: 3437540780820488199, guid: 89d287ba0c64b924381445c68453345f, type: 3}
 --- !u!1 &40987274
 GameObject:
   m_ObjectHideFlags: 0
