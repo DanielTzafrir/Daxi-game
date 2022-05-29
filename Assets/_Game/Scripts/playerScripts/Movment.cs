@@ -30,7 +30,6 @@ public class Movment : MonoBehaviour
     [SerializeField] private float speed = 0;
     [SerializeField] private float jumpSpeed = 10;
     [SerializeField] private float slideSpeed = 10;
-    [SerializeField] private List<GameObject> traps;
     [SerializeField] private LayerMask grouneLayer;
     [SerializeField] private LayerMask playerLayer;
 
@@ -141,7 +140,7 @@ public class Movment : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D collider2D)
     {
-        if (traps.Contains(collider2D.gameObject) && !shield.activeSelf)
+        if (collider2D.tag == "Enemy" && !shield.activeSelf)
         {
             takeDamage();
         }    
