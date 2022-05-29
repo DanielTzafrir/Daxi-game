@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5968635018313279490}
   - component: {fileID: 5968635018313279491}
-  - component: {fileID: 5968635018313279489}
   - component: {fileID: 5968635018313279488}
   m_Layer: 9
   m_Name: Lava1
@@ -85,25 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!253 &5968635018313279489
-BuoyancyEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5968635018313279493}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_SurfaceLevel: 0
-  m_Density: 2
-  m_LinearDrag: 5
-  m_AngularDrag: 5
-  m_FlowAngle: 0
-  m_FlowMagnitude: 0
-  m_FlowVariation: 0
 --- !u!60 &5968635018313279488
 PolygonCollider2D:
   m_ObjectHideFlags: 0

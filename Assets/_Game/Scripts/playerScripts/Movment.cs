@@ -12,6 +12,9 @@ public class Movment : MonoBehaviour
     private bool isCeiling;
     private bool isInfrontAWall;
     private bool isOnSpring;
+    private bool boosting;
+    private float boostTimer;
+    private float normalSpeed;
     private bool springJumping = false;
     private bool springSwitch;
     private bool changedRBGum = false;
@@ -38,6 +41,9 @@ public class Movment : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
 
+        boosting = false;
+        boostTimer = 0;
+        normalSpeed = speed;
     }
 
     void Update()
@@ -45,6 +51,7 @@ public class Movment : MonoBehaviour
         MovementPlayer();
         //spring up
         isOnSpring = Physics2D.OverlapCircle(springCheck.position, 0.2f, playerLayer) || Physics2D.OverlapCircle(springCheck2.position, 0.2f, playerLayer);
+        Debug.Log(isOnSpring);
         if (isOnSpring)
         {
             spring();
@@ -54,6 +61,17 @@ public class Movment : MonoBehaviour
         if (springJumping)
         {
             StartCoroutine(waitASec());            
+        }
+
+        if (boosting)
+        {
+            boostTimer += Time.deltaTime;
+            if (boostTimer >= 1f)
+            {
+                speed = normalSpeed;
+                boostTimer = 0;
+                boosting = false;
+            }
         }
     }
 
@@ -118,15 +136,19 @@ public class Movment : MonoBehaviour
             rb.gravityScale += gravityDownGum;
         }
     }
+
     public void holdingSlideButton()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
 
         if (isGrounded && !gum)
         {
+            Debug.Log("press_slide");
+            ani.SetTrigger("start_sliding");
             ani.SetTrigger("press_slide");
             rb.velocity = Vector2.down * slideSpeed;
         }
+
     }
     
     public void notHoldingSlideButton()
@@ -134,6 +156,7 @@ public class Movment : MonoBehaviour
         if (!gum)
         {
             ani.SetTrigger("no_press_slide");
+            StartCoroutine(stoptrigger());
             rb.velocity = Vector2.down * slideSpeed;
         }
     }
@@ -143,22 +166,17 @@ public class Movment : MonoBehaviour
         if (collider2D.tag == "Enemy" && !shield.activeSelf)
         {
             takeDamage();
-        }    
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!shield.activeSelf)
-        {
-            takeDamage();
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!shield.activeSelf && !gum)
+        
+        else if (collider2D.tag == "speed")
         {
-            takeDamage();
+            speedFunction();
+        }
+        
+        else if (collider2D.tag == "speedBoost")
+        {
+            boosting = true;
+            speed = speed * 2;
         }
     }
     public void takeDamage()
@@ -207,6 +225,16 @@ public class Movment : MonoBehaviour
             rb.gravityScale = 2.3f;
         }
     }
+
+    private void speedFunction()
+    {
+        float normalSpeed = speed;
+        speed = speed + 5;
+        while (speed != normalSpeed)
+        {
+
+        }
+    }
     public bool Gum
     {
         get
@@ -223,5 +251,10 @@ public class Movment : MonoBehaviour
     {
         yield return new WaitForSeconds(15);
         gum = false;
+    }
+    IEnumerator stoptrigger()
+    {
+        yield return new WaitForSeconds(0.5f);
+        ani.ResetTrigger("no_press_slide");
     }
 }
