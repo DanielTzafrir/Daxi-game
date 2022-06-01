@@ -41,6 +41,7 @@ public class Movment : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
 
+        isGrounded = true;
         boosting = false;
         boostTimer = 0;
         normalSpeed = speed;
@@ -50,8 +51,7 @@ public class Movment : MonoBehaviour
     {
         MovementPlayer();
         //spring up
-        isOnSpring = Physics2D.OverlapCircle(springCheck.position, 0.2f, playerLayer) || Physics2D.OverlapCircle(springCheck2.position, 0.2f, playerLayer);
-        Debug.Log(isOnSpring);
+        isOnSpring = Physics2D.OverlapCircle(springCheck.position, 0.1f, playerLayer) || Physics2D.OverlapCircle(springCheck2.position, 0.1f, playerLayer);
         if (isOnSpring)
         {
             spring();
@@ -73,12 +73,13 @@ public class Movment : MonoBehaviour
                 boosting = false;
             }
         }
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
     }
 
     IEnumerator waitASec()
     {
         yield return new WaitForSeconds(0.5f);
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
 
         if (rb.velocity.y < 0)
         {
@@ -167,16 +168,11 @@ public class Movment : MonoBehaviour
         {
             takeDamage();
         }
-        
-        else if (collider2D.tag == "speed")
-        {
-            speedFunction();
-        }
-        
+
         else if (collider2D.tag == "speedBoost")
         {
             boosting = true;
-            speed = speed * 2;
+            speed = speed * 1.6f;
         }
     }
     public void takeDamage()
@@ -226,15 +222,6 @@ public class Movment : MonoBehaviour
         }
     }
 
-    private void speedFunction()
-    {
-        float normalSpeed = speed;
-        speed = speed + 5;
-        while (speed != normalSpeed)
-        {
-
-        }
-    }
     public bool Gum
     {
         get
@@ -244,6 +231,29 @@ public class Movment : MonoBehaviour
         set
         {
             gum = value;
+        }
+    }
+    public float Speed
+    {
+        get
+        {
+            return this.speed;
+        }
+        set
+        {
+            speed = value;
+        }
+    }
+
+    public bool Grounded
+    {
+        get
+        {
+            return this.isGrounded;
+        }
+        set
+        {
+            isGrounded = value;
         }
     }
 
