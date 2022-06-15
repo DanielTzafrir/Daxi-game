@@ -8,6 +8,7 @@ TagManager:
   - speedBoost
   - spring
   - ground check
+  - element
   layers:
   - Default
   - TransparentFX
