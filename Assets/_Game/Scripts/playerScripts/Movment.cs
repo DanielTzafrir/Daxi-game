@@ -40,7 +40,6 @@ public class Movment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
-
         isGrounded = true;
         boosting = false;
         boostTimer = 0;
