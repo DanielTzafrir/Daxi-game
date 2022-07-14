@@ -120,6 +120,8 @@ public class ButtonPower : MonoBehaviour
     public void useBoard()
     {
         GameObject boardObj = Instantiate(board, transform);
+        int LayerNameToInt = LayerMask.NameToLayer("Ground");
+        boardObj.gameObject.layer = LayerNameToInt;
     }
     public void afterPressingPower1()
     {

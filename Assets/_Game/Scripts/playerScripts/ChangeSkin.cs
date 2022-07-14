@@ -15,11 +15,7 @@ public class ChangeSkin : MonoBehaviour
         ani = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
 
-        Debug.Log(GetComponent<RuntimeAnimatorController>());
-
         spr.sprite = skinImg[skinNum - 1];
         ani.runtimeAnimatorController = controllers[skinNum - 1] as RuntimeAnimatorController;
-
     }
-
 }
