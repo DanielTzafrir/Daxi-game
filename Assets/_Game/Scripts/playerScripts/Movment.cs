@@ -51,6 +51,7 @@ public class Movment : MonoBehaviour
         MovementPlayer();
         //spring up
         isOnSpring = Physics2D.OverlapCircle(springCheck.position, 0.1f, playerLayer) || Physics2D.OverlapCircle(springCheck2.position, 0.1f, playerLayer);
+        
         if (isOnSpring)
         {
             spring();
@@ -156,6 +157,8 @@ public class Movment : MonoBehaviour
         if (!gum)
         {
             ani.SetTrigger("no_press_slide");
+            ani.ResetTrigger("start_sliding");
+            ani.ResetTrigger("press_slide");
             StartCoroutine(stoptrigger());
             rb.velocity = Vector2.down * slideSpeed;
         }
@@ -263,7 +266,7 @@ public class Movment : MonoBehaviour
     }
     IEnumerator stoptrigger()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.7f);
         ani.ResetTrigger("no_press_slide");
     }
 }
