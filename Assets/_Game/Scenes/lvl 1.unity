@@ -234,7 +234,7 @@ Animator:
   m_GameObject: {fileID: 12696446}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ddfee20a21a231c4780576e7d0f648b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1db43e272e10de449b3042c275b7a0db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.13, y: 3.13}
+  m_Size: {x: 3.15, y: 3.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -415,7 +415,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.15, y: 3.15}
-    newSize: {x: 3.13, y: 3.13}
+    newSize: {x: 3.15, y: 3.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -471,17 +471,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a184343ee4001458000d9ec51c8ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinNum: 4
+  skinNum: 5
   skinImg:
   - {fileID: 21300000, guid: 6d07a8b3d463ce742b420ae322b9c74d, type: 3}
   - {fileID: 21300000, guid: a445c79a683dd8f47a16577a28bb4d37, type: 3}
   - {fileID: 21300000, guid: c3838cb1c8673144784ad008a8b40532, type: 3}
   - {fileID: 21300000, guid: 9886f6ff2c538a14ba78915a7b51254c, type: 3}
+  - {fileID: 21300000, guid: 9cfffcbb3db127843acfa605e779aec3, type: 3}
   controllers:
   - {fileID: 9100000, guid: 4ec3cbeb519565042be0d2d967d2cddc, type: 2}
   - {fileID: 9100000, guid: 70e8fe9623799134fbd99efb5af695d2, type: 2}
   - {fileID: 9100000, guid: 95857484a1c84d64ebf846e9b66d24c7, type: 2}
   - {fileID: 9100000, guid: ddfee20a21a231c4780576e7d0f648b9, type: 2}
+  - {fileID: 9100000, guid: 1db43e272e10de449b3042c275b7a0db, type: 2}
 --- !u!1 &43535750
 GameObject:
   m_ObjectHideFlags: 0
