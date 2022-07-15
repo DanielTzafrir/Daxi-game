@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class finnishLine : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private bool missionDone;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -18,8 +19,15 @@ public class finnishLine : MonoBehaviour
     IEnumerator wait2sec()
     {
         yield return new WaitForSeconds(2);
-        player.GetComponent<Animator>().SetTrigger("victory");
+        if (missionDone)
+        {
+            player.GetComponent<Animator>().SetTrigger("victory");
 
+        }
+        else
+        {
+            player.GetComponent<Animator>().SetTrigger("lose");
+        }
     }
     IEnumerator wait1sec()
     {
