@@ -234,7 +234,7 @@ Animator:
   m_GameObject: {fileID: 12696446}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1db43e272e10de449b3042c275b7a0db, type: 2}
+  m_Controller: {fileID: 9100000, guid: e73cec0ae505f8144ad0012c71610fb4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   WallCheck2: {fileID: 721141164}
   springCheck: {fileID: 1247664197483526378}
   springCheck2: {fileID: 638733423}
-  speed: 0
+  speed: 5
   jumpSpeed: 13
   slideSpeed: 20
   grouneLayer:
@@ -471,19 +471,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a184343ee4001458000d9ec51c8ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinNum: 5
+  skinNum: 6
   skinImg:
   - {fileID: 21300000, guid: 6d07a8b3d463ce742b420ae322b9c74d, type: 3}
   - {fileID: 21300000, guid: a445c79a683dd8f47a16577a28bb4d37, type: 3}
   - {fileID: 21300000, guid: c3838cb1c8673144784ad008a8b40532, type: 3}
   - {fileID: 21300000, guid: 9886f6ff2c538a14ba78915a7b51254c, type: 3}
   - {fileID: 21300000, guid: 9cfffcbb3db127843acfa605e779aec3, type: 3}
+  - {fileID: 21300000, guid: 0457b5e863a85c5429be4bbb573650f9, type: 3}
   controllers:
   - {fileID: 9100000, guid: 4ec3cbeb519565042be0d2d967d2cddc, type: 2}
   - {fileID: 9100000, guid: 70e8fe9623799134fbd99efb5af695d2, type: 2}
   - {fileID: 9100000, guid: 95857484a1c84d64ebf846e9b66d24c7, type: 2}
   - {fileID: 9100000, guid: ddfee20a21a231c4780576e7d0f648b9, type: 2}
   - {fileID: 9100000, guid: 1db43e272e10de449b3042c275b7a0db, type: 2}
+  - {fileID: 9100000, guid: e73cec0ae505f8144ad0012c71610fb4, type: 2}
 --- !u!1 &43535750
 GameObject:
   m_ObjectHideFlags: 0
