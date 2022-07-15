@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12696446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.77, y: -145.17, z: 0}
+  m_LocalPosition: {x: -18.22, y: -145.06, z: 0}
   m_LocalScale: {x: 0.9656819, y: 0.9656819, z: 0}
   m_Children:
   - {fileID: 903899361}
@@ -335,7 +335,7 @@ MonoBehaviour:
   WallCheck2: {fileID: 721141164}
   springCheck: {fileID: 1247664197483526378}
   springCheck2: {fileID: 638733423}
-  speed: 5
+  speed: 0
   jumpSpeed: 13
   slideSpeed: 20
   grouneLayer:
