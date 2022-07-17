@@ -15,6 +15,11 @@ public class powerUp : MonoBehaviour
 
     private void Update()
     {
+        moveButtons();
+    }
+
+    private void moveButtons()
+    {
         if (!gameObject.GetComponentInParent<BoolPowers>().Power1 && gameObject.GetComponentInParent<BoolPowers>().Power2)
         {
             //move the data in power2 to power1 and then:
@@ -29,6 +34,11 @@ public class powerUp : MonoBehaviour
             gameObject.GetComponentInParent<BoolPowers>().Power2 = true;
             gameObject.GetComponentInParent<BoolPowers>().Power3 = false;
         }
+    }
+
+    private void afterUsingPower()
+    {
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

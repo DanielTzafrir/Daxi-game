@@ -14,6 +14,7 @@ public class ButtonPower : MonoBehaviour
     [SerializeField] private Image power2Mask;
     [SerializeField] private Image power3Mask;
     [SerializeField] private GameObject board;
+    [SerializeField] private GameObject randomPowers;
 
     private Animator ani;
     private float startTimeOfMask1 = 0;
@@ -28,9 +29,25 @@ public class ButtonPower : MonoBehaviour
         power2Mask.enabled = false;
         power3Mask.enabled = false;
     }
+
+    private void Update()
+    {
+        if (!power1.gameObject.activeSelf)
+        {
+            randomPowers.GetComponent<BoolPowers>().Power1 = false;
+        }
+        if (!power2.gameObject.activeSelf)
+        {
+
+            randomPowers.GetComponent<BoolPowers>().Power2 = false;
+        }
+        if (!power3.gameObject.activeSelf)
+        {
+            randomPowers.GetComponent<BoolPowers>().Power3 = false;
+        }
+    }
     public void usePower1()
     {
-        
         if (power1.GetComponent<Image>().sprite.name != "power")
         {
 
@@ -52,7 +69,6 @@ public class ButtonPower : MonoBehaviour
             {
                 //throw a board under Daxi
                 useBoard();
-                Debug.Log("board");
                 afterPressingPower1();
             }
         }
@@ -84,7 +100,6 @@ public class ButtonPower : MonoBehaviour
             {
                 //throw a board under Daxi
                 useBoard();
-                Debug.Log("board");
                 afterPressingPower2();
             }
         }
@@ -115,13 +130,13 @@ public class ButtonPower : MonoBehaviour
             {
                 //throw a board under Daxi
                 useBoard();
-                Debug.Log("board");
                 afterPressingPower3();
             }
         }
     }
     public void useBoard()
     {
+        //its from type "Ground" to be able to jump
         GameObject boardObj = Instantiate(board, transform);
         int LayerNameToInt = LayerMask.NameToLayer("Ground");
         boardObj.gameObject.layer = LayerNameToInt;
