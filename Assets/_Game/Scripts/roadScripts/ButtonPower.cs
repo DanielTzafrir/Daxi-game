@@ -37,6 +37,7 @@ public class ButtonPower : MonoBehaviour
             if (power1.GetComponent<Image>().sprite.name == "Gum button")
             {
                 ani.SetTrigger("gum start");
+                StartCoroutine(gumOn());
                 gameObject.GetComponent<Movment>().Gum = true;
                 maskPower1();
             }
@@ -65,6 +66,7 @@ public class ButtonPower : MonoBehaviour
             {
                 //activate animation of gum. 
                 ani.SetTrigger("gum start");
+                StartCoroutine(gumOn());
                 gameObject.GetComponent<Movment>().Gum = true;
                 maskPower2();
                 //change the rigidBuddy for 15 sec. can be controlled by the up and down buttons (= taken care of in the Movment class).
@@ -96,6 +98,7 @@ public class ButtonPower : MonoBehaviour
             {
                 //activate animation of gum and change the rigidBuddy for 15 sec. can be controlled by the up and down buttons
                 ani.SetTrigger("gum start");
+                StartCoroutine(gumOn());
                 gameObject.GetComponent<Movment>().Gum = true;
                 maskPower3();
             }
@@ -263,5 +266,11 @@ public class ButtonPower : MonoBehaviour
         }
         power3Mask.enabled = false;
         afterPressingPower3();
+    }
+
+    IEnumerator gumOn()
+    {
+        yield return new WaitForSeconds(15);
+        ani.SetTrigger("finnish gum");
     }
 }

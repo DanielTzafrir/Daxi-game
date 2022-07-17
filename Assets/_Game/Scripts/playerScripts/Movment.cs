@@ -20,6 +20,7 @@ public class Movment : MonoBehaviour
     private bool changedRBGum = false;
     private float stopRun = 0;
     private bool gum = false;
+    private bool gotDamagedAlready = true;
     [SerializeField] private GameObject shield;
     [SerializeField] private float gravityUpGum;
     [SerializeField] private float gravityDownGum;
@@ -144,7 +145,6 @@ public class Movment : MonoBehaviour
 
         if (isGrounded && !gum)
         {
-            Debug.Log("press_slide");
             ani.SetTrigger("start_sliding");
             ani.SetTrigger("press_slide");
             rb.velocity = Vector2.down * slideSpeed;
@@ -177,12 +177,32 @@ public class Movment : MonoBehaviour
             speed = speed * 1.6f;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy" && !shield.activeSelf)
+        {
+            takeDamage();
+        }
+
+        else if (collision.tag == "speedBoost")
+        {
+            boosting = true;
+            speed = speed * 1.6f;
+        }
+    }
     public void takeDamage()
     {
         //take damage = lose life, after that imuune for 3 secs.
-        if (!gum)
+        if (!gum && gotDamagedAlready)
         {
+            StartCoroutine(damageWait());
             ani.SetTrigger("onTrap");
+        }
+        else if(gum && gotDamagedAlready)
+        {
+            StartCoroutine(damageWait());
+            ani.SetTrigger("gum damaged");
         }
     }
 
@@ -263,6 +283,13 @@ public class Movment : MonoBehaviour
     {
         yield return new WaitForSeconds(15);
         gum = false;
+    }
+
+    IEnumerator damageWait()
+    {
+        gotDamagedAlready = false;
+        yield return new WaitForSeconds(3);
+        gotDamagedAlready = true;
     }
     IEnumerator stoptrigger()
     {

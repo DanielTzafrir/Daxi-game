@@ -7,18 +7,37 @@ public class finnishLine : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private bool missionDone;
+    private bool isFinnished = false;
+    private bool alreadyStopped = false;
+
+    private void Update()
+    {
+        if (isFinnished && player.GetComponent<Movment>().Speed > 0)
+        {
+            StartCoroutine(slowStop());
+        }
+        else if (player.GetComponent<Movment>().Speed <= 0 && !alreadyStopped && isFinnished)
+        {
+            alreadyStopped = true;
+            player.GetComponent<Animator>().SetTrigger("stand");
+            StartCoroutine(wait1sec());
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            StartCoroutine(wait2sec());
-            StartCoroutine(wait1sec());
+            isFinnished = true;
         }
     }
 
-    IEnumerator wait2sec()
+    private void stand()
     {
-        yield return new WaitForSeconds(2);
+
+    }
+    IEnumerator wait1sec()
+    {
+        yield return new WaitForSeconds(1);
         if (missionDone)
         {
             player.GetComponent<Animator>().SetTrigger("victory");
@@ -29,11 +48,13 @@ public class finnishLine : MonoBehaviour
             player.GetComponent<Animator>().SetTrigger("lose");
         }
     }
-    IEnumerator wait1sec()
+    
+    IEnumerator slowStop()
     {
-        yield return new WaitForSeconds(0.8f);
-        player.GetComponent<Movment>().Speed = 0;
-        player.GetComponent<Animator>().SetTrigger("stand");
-
+        yield return new WaitForSeconds(0.3f);
+        if (player.GetComponent<Movment>().Speed > 0)
+        {
+            player.GetComponent<Movment>().Speed -= 0.02f;
+        }
     }
 }
