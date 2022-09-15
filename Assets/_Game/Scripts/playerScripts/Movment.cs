@@ -21,16 +21,14 @@ public class Movment : MonoBehaviour
     private float stopRun = 0;
     private bool gum = false;
     private bool gotDamagedAlready = true;
+
     [SerializeField] private GameObject shield;
     [SerializeField] private float gravityUpGum;
     [SerializeField] private float gravityDownGum;
-
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform ceilingCheck;
     [SerializeField] private Transform WallCheck;
     [SerializeField] private Transform WallCheck2;
-    [SerializeField] private Transform springCheck;
-    [SerializeField] private Transform springCheck2;
     [SerializeField] private float speed = 0;
     [SerializeField] private float jumpSpeed = 10;
     [SerializeField] private float slideSpeed = 10;
@@ -50,20 +48,14 @@ public class Movment : MonoBehaviour
     void Update()
     {
         MovementPlayer();
-        //spring up
-        isOnSpring = Physics2D.OverlapCircle(springCheck.position, 0.1f, playerLayer) || Physics2D.OverlapCircle(springCheck2.position, 0.1f, playerLayer);
-        
-        if (isOnSpring)
-        {
-            spring();
-            springJumping = true;
-        }
+        springControl();
+        boost();
 
-        if (springJumping)
-        {
-            StartCoroutine(waitASec());            
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
+    }
 
+    private void boost()
+    {
         if (boosting)
         {
             boostTimer += Time.deltaTime;
@@ -74,25 +66,34 @@ public class Movment : MonoBehaviour
                 boosting = false;
             }
         }
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
     }
-
-    IEnumerator waitASec()
+    private void springControl()
     {
-        yield return new WaitForSeconds(0.5f);
-
-        if (rb.velocity.y < 0)
+        if (springJumping)
         {
-            springDown();
+            if (rb.velocity.y < 0)
+            {
+                springDown();
 
+            }
+            else if (rb.velocity.y >= 0)
+            {
+                spring();
+            }
+            if (isGrounded)
+            {
+                onGround();
+                springJumping = false;
+
+            }
         }
-
-        if (isGrounded)
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("spring") && !Grounded)
         {
-            onGround();
-            springJumping = false;
-
+            spring();
+            springJumping = true;
         }
     }
     private void MovementPlayer()

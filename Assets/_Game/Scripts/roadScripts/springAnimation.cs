@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class springAnimation : MonoBehaviour
 {
-    [SerializeField] private Transform playerCheck;
-    [SerializeField] private Transform playerCheck2;
-    [SerializeField] private LayerMask playerLayer;
     [SerializeField] private GameObject player;
 
 
@@ -19,13 +16,13 @@ public class springAnimation : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        isTouchingPlayer = Physics2D.OverlapCircle(playerCheck.position, 0.2f, playerLayer) || Physics2D.OverlapCircle(playerCheck2.position, 0.2f, playerLayer);
 
-        if (isTouchingPlayer && !player.GetComponent<Movment>().Grounded)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player") && !player.GetComponent<Movment>().Grounded)
         {
             ani.SetTrigger("OnIt");
         }
     }
+    
 }

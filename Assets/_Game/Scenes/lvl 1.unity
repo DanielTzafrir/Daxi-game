@@ -234,7 +234,7 @@ Animator:
   m_GameObject: {fileID: 12696446}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ddfee20a21a231c4780576e7d0f648b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4ec3cbeb519565042be0d2d967d2cddc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12696446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 249.14, y: -146.45, z: 0}
+  m_LocalPosition: {x: -77.55, y: -137.5, z: 0}
   m_LocalScale: {x: 0.9656819, y: 0.9656819, z: 0}
   m_Children:
   - {fileID: 903899361}
@@ -333,8 +333,6 @@ MonoBehaviour:
   ceilingCheck: {fileID: 903899361}
   WallCheck: {fileID: 1291123410}
   WallCheck2: {fileID: 721141164}
-  springCheck: {fileID: 1247664197483526378}
-  springCheck2: {fileID: 638733423}
   speed: 5
   jumpSpeed: 13
   slideSpeed: 20
@@ -378,7 +376,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.36, y: -1.2}
+  m_Offset: {x: 0.36, y: -1.14}
   serializedVersion: 2
   m_Radius: 0.35612917
 --- !u!58 &12696453
@@ -4592,7 +4590,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.88314
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6082,11 +6080,6 @@ PolygonCollider2D:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1718924461377248555, guid: 672e8603393772f49978c0cd0e1c323b, type: 3}
   m_PrefabInstance: {fileID: 412997302}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &638733423 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4182392936171629885, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
-  m_PrefabInstance: {fileID: 1514883609}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &641001596
 PrefabInstance:
@@ -7738,7 +7731,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0.09}
+  m_Offset: {x: 0.03, y: 0.15}
   serializedVersion: 2
   m_Radius: 0.12335945
 --- !u!1001 &829325907
@@ -10274,6 +10267,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1210344605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1210344607}
+  - component: {fileID: 1210344606}
+  m_Layer: 0
+  m_Name: Backtrace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1210344606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210344605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dabbbfb28d824c4ca6ed9ae4129376f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Configuration: {fileID: 11400000, guid: 625af15f244518f4f8948490d67b807f, type: 2}
+--- !u!4 &1210344607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210344605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214375099
 GameObject:
   m_ObjectHideFlags: 0
@@ -17900,11 +17937,6 @@ PrefabInstance:
 --- !u!4 &1247664197482398190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4182392936634764570, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
-  m_PrefabInstance: {fileID: 3123897034946284788}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1247664197483526378 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4182392936633529374, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
   m_PrefabInstance: {fileID: 3123897034946284788}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1718924460621540126
