@@ -1,0 +1,113 @@
+{
+    "m_SelectedDeviceId": "1082258d",
+    "m_SelectedPackage": {
+        "deviceId": "1082258d",
+        "name": "com.DefaultCompany.Daxigame",
+        "processId": 6800,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "1082258d",
+            "name": "com.miui.home",
+            "processId": 19938,
+            "exited": true
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.miui.home",
+            "processId": 31491,
+            "exited": true
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 21805,
+            "exited": true
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 29027,
+            "exited": true
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 25987,
+            "exited": true
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.miui.home",
+            "processId": 29418,
+            "exited": false
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 2728,
+            "exited": false
+        },
+        {
+            "deviceId": "1082258d",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 6800,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "unity",
+    "m_FilterIsRegularExpression": true,
+    "m_SymbolPaths": []
+}
