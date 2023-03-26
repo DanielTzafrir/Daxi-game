@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "1082258d",
+    "m_SelectedDeviceId": "18966b9e",
     "m_SelectedPackage": {
-        "deviceId": "1082258d",
+        "deviceId": "18966b9e",
         "name": "com.DefaultCompany.Daxigame",
-        "processId": 6800,
+        "processId": 1915,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "1082258d",
             "name": "com.DefaultCompany.Daxigame",
             "processId": 6800,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 1915,
             "exited": false
         }
     ],
@@ -107,7 +113,21 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "unity",
-    "m_FilterIsRegularExpression": true,
-    "m_SymbolPaths": []
+    "m_FilterOptions": {
+        "m_Filter": "",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    }
 }
