@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "18966b9e",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "18966b9e",
+        "name": "com.DefaultCompany.Daxigame",
+        "processId": 7539,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -90,6 +90,18 @@
             "deviceId": "18966b9e",
             "name": "com.android.chrome",
             "processId": 26590,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 6390,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 7539,
             "exited": false
         }
     ],
