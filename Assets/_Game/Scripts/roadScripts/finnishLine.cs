@@ -11,7 +11,7 @@ public class finnishLine : MonoBehaviour
     private bool alreadyStopped = false;
 
     private void Update()
-    {
+    {/*
         if (isFinnished && player.GetComponent<Movment>().Speed > 0)
         {
             StartCoroutine(slowStop());
@@ -21,7 +21,7 @@ public class finnishLine : MonoBehaviour
             alreadyStopped = true;
             player.GetComponent<Animator>().SetTrigger("stand");
             StartCoroutine(wait1sec());
-        }
+        }*/
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

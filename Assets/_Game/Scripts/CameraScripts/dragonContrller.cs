@@ -13,7 +13,7 @@ public class dragonContrller : MonoBehaviour
         triggerFunction();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (trigger)
         {

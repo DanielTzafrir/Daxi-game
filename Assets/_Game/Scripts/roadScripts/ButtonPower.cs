@@ -32,19 +32,19 @@ public class ButtonPower : MonoBehaviour
 
     private void Update()
     {
-        if (!power1.gameObject.activeSelf)
-        {
-            randomPowers.GetComponent<BoolPowers>().Power1 = false;
-        }
-        if (!power2.gameObject.activeSelf)
-        {
+        //if (!power1.gameObject.activeSelf)
+        //{
+        //    randomPowers.GetComponent<BoolPowers>().Power1 = false;
+        //}
+        //if (!power2.gameObject.activeSelf)
+        //{
 
-            randomPowers.GetComponent<BoolPowers>().Power2 = false;
-        }
-        if (!power3.gameObject.activeSelf)
-        {
-            randomPowers.GetComponent<BoolPowers>().Power3 = false;
-        }
+        //    randomPowers.GetComponent<BoolPowers>().Power2 = false;
+        //}
+        //if (!power3.gameObject.activeSelf)
+        //{
+        //    randomPowers.GetComponent<BoolPowers>().Power3 = false;
+        //}
     }
     public void usePower1()
     {
