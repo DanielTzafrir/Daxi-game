@@ -1339,6 +1339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228bcbe4a5607124595e6cf969604b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseMoveSpeed: 5
   moveSpeed: 5
   jumpSpeed: 10
   rigidBody: {fileID: 0}
@@ -1348,6 +1349,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   bodyCollider: {fileID: 199498519}
+  shield: {fileID: 911147537}
 --- !u!95 &199498524
 Animator:
   serializedVersion: 5
@@ -3288,9 +3290,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movment, Assembly-CSharp
-          m_MethodName: 
+        - m_Target: {fileID: 199498523}
+          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+          m_MethodName: holdingSlideButton
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3304,9 +3306,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movment, Assembly-CSharp
-          m_MethodName: 
+        - m_Target: {fileID: 199498523}
+          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+          m_MethodName: notHoldingSlideButton
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3362,7 +3364,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 199498523}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: CrouchEvent
+        m_MethodName: SlideEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
