@@ -7,9 +7,8 @@ using UnityEngine.UI;
 
 public class worldALevels : MonoBehaviour
 {
-    public GameObject LoadingPanel;
-    public Slider LoadingBar;
-    public TextMeshProUGUI LoadingText;
+    public GameObject MissionPanel;
+   
     public void LoadWorlds()
     {
         SceneManager.LoadSceneAsync("worlds");
@@ -22,15 +21,16 @@ public class worldALevels : MonoBehaviour
     }
 
     IEnumerator LoadSceneAsyncMethod(string levelToLoad)
-    {
-        AsyncOperation loadingLevelOperation = SceneManager.LoadSceneAsync(levelToLoad); 
-        while(!loadingLevelOperation.isDone)
+    {        
+        MissionPanel.SetActive(true);
+        AsyncOperation loadingLevelOperation = SceneManager.LoadSceneAsync(levelToLoad);
+        while (!loadingLevelOperation.isDone)
         {
-            float progress = Mathf.Clamp01(loadingLevelOperation.progress/0.9f);
-            LoadingText.text = progress * 100f + "%";
-            Debug.Log(progress);
+                      
             yield return null;
         }
+
+        loadingLevelOperation.allowSceneActivation = true;
     }
 
     public void LoadLvl1()
