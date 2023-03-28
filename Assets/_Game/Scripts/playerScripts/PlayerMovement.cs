@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask Ground;
     [SerializeField] private CapsuleCollider2D bodyCollider;
     [SerializeField] private GameObject shield;
-
+    private bool isOnGumEffect;
     private void Start()
     {
         moveSpeed = baseMoveSpeed;
@@ -33,10 +33,18 @@ public class PlayerMovement : MonoBehaviour
     }
     public void JumpEvent()
     {
-        Jump();
+        if (isOnGumEffect)
+            GumJump();
+        else
+            Jump();
     }
 
-    
+    public void GumEffect()
+    {
+        isOnGumEffect = true;        
+        StartCoroutine(GumCoroutine());
+        isOnGumEffect = false;
+    }
     private void Jump()
     {
         if (Physics2D.OverlapCircle(groundCheck.position, 0.2f, Ground))
@@ -46,11 +54,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void GumJump()
+    {
+        rigidBody.gravityScale = -0.5f;
+    }
+
     public void SlideEvent()
     {
-        Debug.Log("sLIDE event");
-        animator.SetTrigger("start_sliding");
-        Slide();
+        if (isOnGumEffect)
+            GumSlide();
+        else
+        {
+            animator.SetTrigger("start_sliding");
+            Slide();
+        }        
+    }
+
+    private void GumSlide()
+    {
+        rigidBody.gravityScale = +0.5f;
     }
 
     private void Slide()
@@ -66,6 +88,10 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         animator.SetTrigger("no_press_slide");
         bodyCollider.enabled = false;
+    }
+    IEnumerator GumCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
     }
     
     public void HoldingSlideButton()
@@ -108,7 +134,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage()
     {
-        Debug.Log("Damage");
         animator.SetTrigger("onTrap");               
     }
 }
