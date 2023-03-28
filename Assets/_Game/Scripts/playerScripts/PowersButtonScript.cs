@@ -10,12 +10,19 @@ public class PowersButtonScript : MonoBehaviour
     private float startTimeOfMask = 0;
     public void PowerUsed()
     {
-        UpdatePlayer();
-        player.GetComponent<ButtonPower>().UsePower(image.name);
+        if(image.fillAmount==1)
+        {
+            UpdatePlayer();
+            UpdateLevelManager(image.sprite);
+            player.GetComponent<ButtonPower>().UsePower(image.name);
+        }        
+    }
+    private void UpdateLevelManager(Sprite imageSprite)
+    {
+        GameObject.FindWithTag("LevelManager").GetComponent<LevelScript>().powerWasUsed(imageSprite);
     }
     private void UpdatePlayer()
     {
-        Debug.Log("pressed the button");
         player.GetComponent<ButtonPower>().UsePower(image.mainTexture.name);        
         image.fillAmount = 0f;
         StartCoroutine(ChangesFillAmount(5,image));
