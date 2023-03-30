@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float baseMoveSpeed = 5f;
     [SerializeField] private float moveSpeed; // Speed of player movement
     [SerializeField] private float jumpSpeed = 10f;
+    [SerializeField] private float springSpeed = 30f;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private CapsuleCollider2D bodyCollider;
     [SerializeField] private GameObject shield;
     private bool isOnGumEffect;
+    private float rigidBodyDefaultGravityScale = 2.3f;
     private void Start()
     {
         moveSpeed = baseMoveSpeed;
@@ -31,32 +33,32 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = baseMoveSpeed + moveSpeed / 2;
         }
     }
+    
     public void JumpEvent()
     {
         if (isOnGumEffect)
             GumJump();
         else
-            Jump();
+            Jump(jumpSpeed);
     }
 
     public void GumEffect()
-    {
-        isOnGumEffect = true;        
-        StartCoroutine(GumCoroutine());
-        isOnGumEffect = false;
+    {            
+        StartCoroutine(GumCoroutine());        
     }
-    private void Jump()
+    
+    private void Jump(float elevationSpeed)
     {
         if (Physics2D.OverlapCircle(groundCheck.position, 0.2f, Ground))
         {            
             animator.SetTrigger("jump");
-            rigidBody.velocity = Vector2.up * jumpSpeed;
+            rigidBody.velocity = Vector2.up * elevationSpeed;
         }
     }
 
     private void GumJump()
     {
-        rigidBody.gravityScale = -0.5f;
+        rigidBody.gravityScale = -0.5f;               
     }
 
     public void SlideEvent()
@@ -78,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     private void Slide()
     {        
         bodyCollider.enabled = true;
-        rigidBody.velocity = Vector2.down * 3f;
+        rigidBody.velocity = Vector2.down * 10f;
         animator.SetTrigger("press_slide");
         StartCoroutine(StopSliding());
     }
@@ -91,9 +93,11 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator GumCoroutine()
     {
+        isOnGumEffect = true;    
         yield return new WaitForSeconds(1.5f);
+        isOnGumEffect = false;
+        rigidBody.gravityScale = rigidBodyDefaultGravityScale;
     }
-    
     public void HoldingSlideButton()
     {
         bodyCollider.enabled = true;
@@ -125,6 +129,11 @@ public class PlayerMovement : MonoBehaviour
             case "element":
                 {
                     break;
+                }
+            case "spring":
+                {
+                Jump(springSpeed);
+                break;
                 }
             default:
                 // code block

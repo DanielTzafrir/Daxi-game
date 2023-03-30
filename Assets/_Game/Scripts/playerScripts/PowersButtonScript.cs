@@ -7,6 +7,8 @@ public class PowersButtonScript : MonoBehaviour
 {    
     [SerializeField] private Image image;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject levelManager;
+
     private float startTimeOfMask = 0;
     public void PowerUsed()
     {
@@ -19,7 +21,7 @@ public class PowersButtonScript : MonoBehaviour
     }
     private void UpdateLevelManager(Sprite imageSprite)
     {
-        GameObject.FindWithTag("LevelManager").GetComponent<LevelScript>().powerWasUsed(imageSprite);
+        levelManager.GetComponent<LevelScript>().powerWasUsed(imageSprite);
     }
     private void UpdatePlayer()
     {

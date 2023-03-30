@@ -963,6 +963,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 0}
@@ -1169,6 +1173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228bcbe4a5607124595e6cf969604b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &199498526 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4772121218786258242, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+  m_PrefabInstance: {fileID: 4772121218893477470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &207295079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,79 +1624,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &251914655
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 355255116}
-    m_Modifications:
-    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: shield
-      value: 
-      objectReference: {fileID: 911147537}
-    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: powerbutton1
-      value: 
-      objectReference: {fileID: 2003605472}
-    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: powerbutton2
-      value: 
-      objectReference: {fileID: 1696095169}
-    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: powerbutton3
-      value: 
-      objectReference: {fileID: 1878076832}
-    - target: {fileID: 3668962556244159378, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_Name
-      value: powerBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 248.27002
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -139.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
 --- !u!1 &288398652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2195,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 911147537}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 2003605472}
@@ -2276,7 +2216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2351,7 +2291,6 @@ Transform:
   m_Children:
   - {fileID: 1356337571}
   - {fileID: 2013076358}
-  - {fileID: 975815628}
   - {fileID: 213463324}
   - {fileID: 548464207}
   - {fileID: 812625614}
@@ -2779,6 +2718,10 @@ PrefabInstance:
       propertyPath: shield
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
@@ -6162,6 +6105,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 0}
@@ -6441,6 +6388,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 911147537}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 2003605472}
@@ -6560,7 +6511,11 @@ PrefabInstance:
     - target: {fileID: 4182392936634764573, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 199498517}
+    - target: {fileID: 4182392936634764573, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1368526241}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
 --- !u!4 &795524452 stripped
@@ -6745,6 +6700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffectMultiplier: {x: 0.01, y: 0}
+  mainCamera: {fileID: 301320694}
 --- !u!212 &838375017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8588,11 +8544,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &975815628 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
-  m_PrefabInstance: {fileID: 251914655}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1003254153
 GameObject:
   m_ObjectHideFlags: 0
@@ -9130,7 +9081,7 @@ PrefabInstance:
     - target: {fileID: 4182392936634764573, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 199498517}
     - target: {fileID: 4182392936634764574, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -9318,6 +9269,10 @@ PrefabInstance:
       propertyPath: shield
       value: 
       objectReference: {fileID: 911147537}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
@@ -10283,6 +10238,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4182392936634764573, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2090524864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
 --- !u!4 &1203004478 stripped
@@ -11173,7 +11132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board1: {fileID: 1105089078}
+  animator1: {fileID: 1105089080}
   board2: {fileID: 1798554125}
+  animator2: {fileID: 1798554127}
 --- !u!114 &1308773398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11238,6 +11199,10 @@ PrefabInstance:
       propertyPath: shield
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
@@ -11400,6 +11365,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
   m_PrefabInstance: {fileID: 1083098386}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1368526241 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4182392936634764569, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
+  m_PrefabInstance: {fileID: 795524451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1368873575
 GameObject:
   m_ObjectHideFlags: 0
@@ -11446,6 +11416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffectMultiplier: {x: 0.03, y: 0}
+  mainCamera: {fileID: 301320694}
 --- !u!212 &1368873578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11925,6 +11896,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 911147537}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 2003605472}
@@ -11942,7 +11917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13037,6 +13012,10 @@ PrefabInstance:
       propertyPath: shield
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
@@ -14456,6 +14435,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4182392936634764574, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
 --- !u!4 &1692892678 stripped
@@ -14611,6 +14594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1696095170}
   player: {fileID: 199498517}
+  levelManager: {fileID: 7396721653395715813}
 --- !u!1 &1730635448
 GameObject:
   m_ObjectHideFlags: 0
@@ -14776,18 +14760,6 @@ MonoBehaviour:
       - m_Target: {fileID: 199498523}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: JumpEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Movment, Assembly-CSharp
-        m_MethodName: gumUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15825,6 +15797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1878076833}
   player: {fileID: 199498517}
+  levelManager: {fileID: 7396721653395715813}
 --- !u!1 &1898616277
 GameObject:
   m_ObjectHideFlags: 0
@@ -16422,6 +16395,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 0}
@@ -16636,6 +16613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2003605473}
   player: {fileID: 199498517}
+  levelManager: {fileID: 7396721653395715813}
 --- !u!1 &2005161994
 GameObject:
   m_ObjectHideFlags: 0
@@ -17807,6 +17785,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2090524864 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4182392936634764569, guid: 82ca227d03e4c314bb1fcfd02130b7b0, type: 3}
+  m_PrefabInstance: {fileID: 1203004477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104367400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18183,6 +18166,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 911147537}
     - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 7396721653395715813}
+    - target: {fileID: 3668962556244159377, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: powerbutton1
       value: 
       objectReference: {fileID: 2003605472}
@@ -18200,7 +18187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3668962556244159379, guid: 1ff00561b8c09de42ac12489f658d10a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18413,6 +18400,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4772121218057827404, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772121218057827407, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772121218786258243, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 199498526}
     - target: {fileID: 4772121218786258244, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -18456,6 +18455,18 @@ PrefabInstance:
     - target: {fileID: 4772121218786258244, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772121218786258245, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+      propertyPath: jumpSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772121218786258245, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772121218786258245, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
+      propertyPath: baseMoveSpeed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4772121218786258251, guid: ce0ea8e27a9c0fe46bc26abb907e2570, type: 3}
       propertyPath: m_Name

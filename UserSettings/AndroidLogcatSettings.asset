@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "18966b9e",
         "name": "com.DefaultCompany.Daxigame",
-        "processId": 7539,
-        "exited": false
+        "processId": 30661,
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -103,6 +103,18 @@
             "name": "com.DefaultCompany.Daxigame",
             "processId": 7539,
             "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 26815,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 30661,
+            "exited": true
         }
     ],
     "m_Tags": {

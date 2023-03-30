@@ -29,9 +29,8 @@ public class LevelScript : MonoBehaviour
             
     public void powerWasUsed(Sprite powerToReturnToList)
     {
-        if(buttonToUpdate!=0)
-            powerButtons[buttonToUpdate].SetActive(false);
-
+        // if(buttonToUpdate!=0)
+        //     powerButtons[buttonToUpdate-1].SetActive(false);
         powersOptionsLeft.Add(powerToReturnToList);
         buttonToUpdate--;
     }

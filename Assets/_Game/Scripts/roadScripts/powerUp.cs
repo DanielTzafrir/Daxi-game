@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class powerUp : MonoBehaviour 
 {        
+    [SerializeField] GameObject LevelManager;
     private void OnTriggerEnter2D(Collider2D collision)
     {       
         if (collision.gameObject.CompareTag("Player"))
@@ -15,7 +16,7 @@ public class powerUp : MonoBehaviour
 
     public void RandomPower()
     {                       
-        GameObject.FindWithTag("LevelManager").GetComponent<LevelScript>().PowerRecieved();
+        LevelManager.GetComponent<LevelScript>().PowerRecieved();
     }
 
  

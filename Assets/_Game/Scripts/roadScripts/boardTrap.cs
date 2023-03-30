@@ -5,11 +5,14 @@ using UnityEngine;
 public class boardTrap : MonoBehaviour
 {
     [SerializeField] private GameObject board1;
+    [SerializeField] private Animator animator1;
     [SerializeField] private GameObject board2;
+    [SerializeField] private Animator animator2;
+
 
     public void triggerBoard()
     {
-        board1.GetComponent<Animator>().SetTrigger("on");
-        board2.GetComponent<Animator>().SetTrigger("on");
+       animator1.SetTrigger("on");
+       animator2.SetTrigger("on");
     }
 }

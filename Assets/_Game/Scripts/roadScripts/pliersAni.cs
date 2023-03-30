@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class pliersAni : MonoBehaviour
 {
-    private Animator ani;
-
-    private void Start()
-    {
-        ani = GetComponent<Animator>();
-    }
+    [SerializeField] private Animator animator;
+  
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            ani.SetTrigger("OnPlier");
+            animator.SetTrigger("OnPlier");
         }
     }
 }

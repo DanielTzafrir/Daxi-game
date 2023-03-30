@@ -10,19 +10,19 @@ public class finnishLine : MonoBehaviour
     private bool isFinnished = false;
     private bool alreadyStopped = false;
 
-    private void Update()
-    {/*
-        if (isFinnished && player.GetComponent<Movment>().Speed > 0)
-        {
-            StartCoroutine(slowStop());
-        }
-        else if (player.GetComponent<Movment>().Speed <= 0 && !alreadyStopped && isFinnished)
-        {
-            alreadyStopped = true;
-            player.GetComponent<Animator>().SetTrigger("stand");
-            StartCoroutine(wait1sec());
-        }*/
-    }
+    // private void Update()
+    // {/*
+    //     if (isFinnished && player.GetComponent<Movment>().Speed > 0)
+    //     {
+    //         StartCoroutine(slowStop());
+    //     }
+    //     else if (player.GetComponent<Movment>().Speed <= 0 && !alreadyStopped && isFinnished)
+    //     {
+    //         alreadyStopped = true;
+    //         player.GetComponent<Animator>().SetTrigger("stand");
+    //         StartCoroutine(wait1sec());
+    //     }*/
+    // }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
