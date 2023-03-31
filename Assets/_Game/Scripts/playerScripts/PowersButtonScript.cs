@@ -5,38 +5,43 @@ using UnityEngine.UI;
 
 public class PowersButtonScript : MonoBehaviour
 {    
+    [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Image image;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject levelManager;
+    [SerializeField] private Image Mask;
+    [SerializeField] private float PowerDelayInSeconds = 5f;
 
-    private float startTimeOfMask = 0;
+    public void PowerWasCollected()
+    {
+        StartCoroutine(ChangesFillAmount(PowerDelayInSeconds,Mask));
+    }
     public void PowerUsed()
     {
-        if(image.fillAmount==1)
+        if(Mask.fillAmount==0)
         {
             UpdatePlayer();
             UpdateLevelManager(image.sprite);
-            player.GetComponent<ButtonPower>().UsePower(image.name);
         }        
     }
     private void UpdateLevelManager(Sprite imageSprite)
     {
         levelManager.GetComponent<LevelScript>().powerWasUsed(imageSprite);
+        image.sprite = defaultSprite;
     }
     private void UpdatePlayer()
     {
-        player.GetComponent<ButtonPower>().UsePower(image.mainTexture.name);        
-        image.fillAmount = 0f;
-        StartCoroutine(ChangesFillAmount(5,image));
+        player.GetComponent<ButtonPower>().UsePower(image.mainTexture.name);                
     }
     private IEnumerator ChangesFillAmount(float duration,Image image)
-    {
-
+    {    
+        float startTimeOfMask = 0;
         while (startTimeOfMask < duration)
         {
             startTimeOfMask += Time.deltaTime;
-            image.fillAmount = Mathf.Lerp(0, 1, startTimeOfMask / duration);
+            image.fillAmount = Mathf.Lerp(1, 0, startTimeOfMask / duration);
             yield return null;
-        }        
+        }  
+        image.fillAmount=0f;      
     }   
 }

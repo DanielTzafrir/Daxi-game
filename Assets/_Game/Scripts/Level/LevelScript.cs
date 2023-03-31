@@ -19,8 +19,9 @@ public class LevelScript : MonoBehaviour
         if(buttonToUpdate<powerButtons.Count)
         {
             int chosenPower = Random.Range(0,powersOptionsLeft.Count);
-            powerButtons[buttonToUpdate].GetComponent<Image>().sprite = powersOptionsLeft[chosenPower];
             powerButtons[buttonToUpdate].SetActive(true);
+            powerButtons[buttonToUpdate].GetComponent<Image>().sprite = powersOptionsLeft[chosenPower];
+            powerButtons[buttonToUpdate].GetComponent<PowersButtonScript>().PowerWasCollected();
             powersOptionsLeft.RemoveAt(chosenPower); 
             buttonToUpdate++;
         }
