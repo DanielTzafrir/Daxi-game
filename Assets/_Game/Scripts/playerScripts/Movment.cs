@@ -45,15 +45,6 @@ public class Movment : MonoBehaviour
         normalSpeed = speed;
     }
 
-    void Update()
-    {
-        MovementPlayer();
-        springControl();
-        boost();
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
-    }
-
     private void boost()
     {
         if (boosting)
@@ -231,6 +222,11 @@ public class Movment : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        MovementPlayer();
+        springControl();
+        boost();
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, grouneLayer);
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
         if (gum && !changedRBGum)
         {

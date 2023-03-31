@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "18966b9e",
         "name": "com.DefaultCompany.Daxigame",
-        "processId": 1915,
+        "processId": 19355,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -58,8 +58,68 @@
         },
         {
             "deviceId": "18966b9e",
+            "name": "com.android.launcher",
+            "processId": 12723,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
             "name": "com.DefaultCompany.Daxigame",
-            "processId": 1915,
+            "processId": 17982,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 23509,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 3053,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 996,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.android.chrome",
+            "processId": 26590,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 6390,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 7539,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 26815,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 30661,
+            "exited": true
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 19355,
             "exited": false
         }
     ],
@@ -110,8 +170,8 @@
             true,
             true
         ],
-        "MemoryGroup": 2,
-        "Behavior": 0
+        "MemoryGroup": 1,
+        "Behavior": 1
     },
     "m_FilterOptions": {
         "m_Filter": "",

@@ -4,24 +4,13 @@ using UnityEngine;
 
 public class springAnimation : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    [SerializeField]private Animator animator;
 
-
-    private Animator ani;
-    private bool isTouchingPlayer;
-
-    void Start()
+     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ani = GetComponent<Animator>();
-
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("Player") && !player.GetComponent<Movment>().Grounded)
+        if (collision.transform.CompareTag("Player"))
         {
-            ani.SetTrigger("OnIt");
+            animator.SetTrigger("OnIt");
         }
     }
     

@@ -7,17 +7,17 @@ public class shopMenu : MonoBehaviour
 {
     public void LoadPlay()
     {
-        SceneManager.LoadScene("worlds");
+        SceneManager.LoadSceneAsync("worlds");
     }
 
     public void LoadShop()
     {
-        SceneManager.LoadScene("shop");
+        SceneManager.LoadSceneAsync("shop");
     }
 
     public void back()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("main");
+        SceneManager.LoadSceneAsync("main");
     }
 }
