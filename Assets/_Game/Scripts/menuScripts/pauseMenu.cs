@@ -11,23 +11,24 @@ public class pauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public int countDownTime;
     public TMPro.TextMeshProUGUI countDownDisplay;
-
+    [SerializeField] Rigidbody2D player;
     private void Awake()
     {
         instance = this;
+        player.bodyType = RigidbodyType2D.Static;
     }
-    /*private void Start()
+    private void Start()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         GameIsPaused = true;
         StartCoroutine(CountDownToStart());
-        Debug.Log("7");
-    }*/
+         Debug.Log("7");
+    }
 
     public void Begin()
     {
         GameIsPaused = false;
-        Time.timeScale = 1f;
+        player.bodyType = RigidbodyType2D.Dynamic;
     }
 
     public void Resume()
@@ -56,25 +57,20 @@ public class pauseMenu : MonoBehaviour
 
     IEnumerator CountDownToStart()
     {
-        Debug.Log("2");
         while (countDownTime > 0)
         {
             if (countDownTime == 2)
             {
-                Debug.Log("3");
                 countDownDisplay.text = "Ready?";
             }
             else
             {
-                Debug.Log("4");
                 countDownDisplay.text = "Set";
             }
-            Debug.Log("5");
             yield return new WaitForSeconds(1f);
 
             countDownTime--;
         }
-        Debug.Log("6");
         countDownDisplay.text = "GO!";
 
         Begin();

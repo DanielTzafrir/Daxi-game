@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/main.unity
     guid: 9c4007a649a485848ad169fc92b57c00
   - enabled: 1
-    path: Assets/_Game/Scenes/lvl 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/_Game/Scenes/shop.unity
     guid: 0f443d8ec336baf40926929f9fd05add
   - enabled: 1
@@ -20,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/lvls world 1.unity
     guid: 8d7fb086612d4f5488fc0ac01c86710d
+  - enabled: 1
+    path: Assets/_Game/Scenes/World1LoadingPage.unity
+    guid: d9ddacf7885ae874aa94b1fe56d3fdca
+  - enabled: 1
+    path: Assets/_Game/Scenes/lvl 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/_Game/Scenes/lvl 2.unity
     guid: c7493a70ccf23df45ba91cf06760932d

@@ -11,8 +11,7 @@ public class worldALevels : MonoBehaviour
    
     public void LoadWorlds()
     {
-        SceneManager.LoadSceneAsync("worlds");
-        LevelLoader("lvl 1");
+        SceneManager.LoadSceneAsync("World1LoadingPage");
     }
 
     public void LevelLoader(string levelToLoad)

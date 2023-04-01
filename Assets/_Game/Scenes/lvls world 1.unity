@@ -2753,7 +2753,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 459358021}
         m_TargetAssemblyTypeName: worldALevels, Assembly-CSharp
-        m_MethodName: LoadLvl1
+        m_MethodName: LoadWorlds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
