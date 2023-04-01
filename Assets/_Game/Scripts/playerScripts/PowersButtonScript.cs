@@ -27,7 +27,7 @@ public class PowersButtonScript : MonoBehaviour
     private void UpdateLevelManager(Sprite imageSprite)
     {
         levelManager.GetComponent<LevelScript>().powerWasUsed(imageSprite);
-        image.sprite = defaultSprite;
+        //image.sprite = defaultSprite;
     }
     private void UpdatePlayer()
     {
