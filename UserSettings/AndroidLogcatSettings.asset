@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "18966b9e",
         "name": "com.DefaultCompany.Daxigame",
-        "processId": 19355,
+        "processId": 14922,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -120,6 +120,12 @@
             "deviceId": "18966b9e",
             "name": "com.DefaultCompany.Daxigame",
             "processId": 19355,
+            "exited": false
+        },
+        {
+            "deviceId": "18966b9e",
+            "name": "com.DefaultCompany.Daxigame",
+            "processId": 14922,
             "exited": false
         }
     ],

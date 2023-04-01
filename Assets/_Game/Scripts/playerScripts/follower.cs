@@ -13,6 +13,5 @@ public class follower : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, Character.transform.position, speed * Time.deltaTime);
-
     }
 }

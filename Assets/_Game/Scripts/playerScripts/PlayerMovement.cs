@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] public float moveSpeed; // Speed of player movement
     [SerializeField] private float baseMoveSpeed = 5f;
-    [SerializeField] private float moveSpeed; // Speed of player movement
     [SerializeField] private float jumpSpeed = 10f;
-    [SerializeField] private float springSpeed = 30f;
+    [SerializeField] private float springSpeed = 15f;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator GumCoroutine()
     {
         isOnGumEffect = true;    
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(5f);
         isOnGumEffect = false;
         rigidBody.gravityScale = rigidBodyDefaultGravityScale;
     }
@@ -133,6 +133,11 @@ public class PlayerMovement : MonoBehaviour
             case "spring":
                 {
                 Jump(springSpeed);
+                break;
+                }
+            case "wall spring":
+                {
+                Jump(2* springSpeed);
                 break;
                 }
             default:

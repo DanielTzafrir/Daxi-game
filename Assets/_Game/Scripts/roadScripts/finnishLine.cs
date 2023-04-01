@@ -29,6 +29,9 @@ public class finnishLine : MonoBehaviour
         {
             isFinnished = true;
         }
+        StartCoroutine(slowStop());
+        player.GetComponent<Animator>().SetTrigger("stand");
+        StartCoroutine(wait1sec());
     }
 
     private void stand()
@@ -41,7 +44,6 @@ public class finnishLine : MonoBehaviour
         if (missionDone)
         {
             player.GetComponent<Animator>().SetTrigger("victory");
-
         }
         else
         {
@@ -52,9 +54,6 @@ public class finnishLine : MonoBehaviour
     IEnumerator slowStop()
     {
         yield return new WaitForSeconds(0.3f);
-        if (player.GetComponent<Movment>().Speed > 0)
-        {
-            player.GetComponent<Movment>().Speed -= 0.02f;
-        }
+        player.GetComponent<PlayerMovement>().moveSpeed = 0f;        
     }
 }
