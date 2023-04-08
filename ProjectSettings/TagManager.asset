@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - LevelManager
   - wall spring
+  - Manager
   layers:
   - Default
   - TransparentFX

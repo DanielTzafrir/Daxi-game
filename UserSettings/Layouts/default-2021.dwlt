@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 114
+  controlID: 87
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 47
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 48
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,9 +344,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6ecd7fb0125c6844cb8898452403831f, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 4ec3cbeb519565042be0d2d967d2cddc, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 666791241492227561, guid: 6ecd7fb0125c6844cb8898452403831f, type: 2}
+  - m_Target: {fileID: -625409267484825442, guid: 4ec3cbeb519565042be0d2d967d2cddc, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -401,36 +401,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Game/Scripts/Level
+    - Assets/_Game/Scripts/menuScripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Game/Scripts/Level
+  - Assets/_Game/Scripts/menuScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\Daxi-game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 7e610000
-    m_LastClickedID: 24958
-    m_ExpandedIDs: 00000000426100004461000046610000486100004a6100004c610000586100005e6100006461000054700000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e45a0000
+    m_LastClickedID: 23268
+    m_ExpandedIDs: 00000000aa5a0000ac5a0000ae5a0000b05a0000b25a0000b45a0000b65a0000b85a0000cc5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: _Game
+      m_OriginalName: _Game
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23212
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -444,7 +444,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000426100004461000046610000486100004a6100004c610000
+    m_ExpandedIDs: 00000000aa5a0000ac5a0000ae5a0000b05a0000b25a0000b45a0000b65a0000b85a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,10 +469,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9ce30000
-    m_LastClickedInstanceID: 58268
+    m_SelectedInstanceIDs: dae30000
+    m_LastClickedInstanceID: 58330
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000565a0000
+    m_ExpandedInstanceIDs: c6230000565a0000205b0000385a00005055000008ca0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -574,9 +574,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9ce30000
-      m_LastClickedID: 58268
-      m_ExpandedIDs: c4e7ffff30eafffffeecffffc8f1ffff26fbfffff65400009c5500006ae00000e2e00000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 86c1ffff68c5ffffe8ccffff3ed3ffff26fbffff6a540000c2540000da540000f6540000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -881,9 +881,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 244.7946, y: -149.51237, z: -0.04696595}
+    m_Target: {x: 561.1542, y: 259.84778, z: -0.0686991}
     speed: 2
-    m_Value: {x: 244.7946, y: -149.51237, z: -0.04696595}
+    m_Value: {x: 561.1542, y: 259.84778, z: -0.0686991}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -934,9 +934,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.9262223
+    m_Target: 617.5289
     speed: 2
-    m_Value: 6.9262223
+    m_Value: 617.5289
   m_Ortho:
     m_Target: 1
     speed: 2

@@ -1,0 +1,23 @@
+{
+   "levelsArray": [{
+        "missionText": "Collect $ Donutes",
+        "imageName": "Donut",
+        "missionCount": 5
+    },
+    {
+        "missionText": "Collect $ of these",
+        "imageName": "CandyLolipop",
+        "missionCount": 7
+    },
+    {
+        "missionText": "Collect $ candy sticks",
+        "imageName": "CandyStick",
+        "missionCount": 10
+    },
+    {
+        "missionText": "Don't disqualify from the vampire",
+        "imageName": "Vampire",
+        "missionCount": -1
+    }
+]    
+}

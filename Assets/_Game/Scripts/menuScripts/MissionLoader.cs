@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+using System.IO;
 
 public class MissionLoader : MonoBehaviour
 {
@@ -12,11 +12,40 @@ public class MissionLoader : MonoBehaviour
     [SerializeField] Image missionSprite;
     [SerializeField] TextMeshProUGUI missionCollectionCount;
     [SerializeField] Button resumeButton;
+    [SerializeField]private ConfigLevelData configLevelData;
+    [SerializeField] private ConfigLevelDataArray configArray;
     private AsyncOperation asyncLoad;
 
-    void Start()
+    void Awake()
     {
         LoadSceneInBackground("lvl 1");
+        GetMissionFromConfig();
+    }
+
+    void GetMissionFromConfig()
+    {
+        GetConfigLevelData();
+        missionText.text = configLevelData.missionText.Replace("$",configLevelData.missionCount.ToString());
+        missionSprite.sprite = Resources.Load<Sprite>("Donut13");
+    }
+
+    private void GetConfigLevelData()
+    {
+        
+        int level = MainManagerScript.Instance.GetLevel();
+        string filePath = Application.dataPath + "/Configs/levelConfig.json";
+        print(filePath);
+        if (File.Exists(filePath))
+        {
+            
+            string jsonData = File.ReadAllText(filePath);
+            configArray =  JsonUtility.FromJson<ConfigLevelDataArray>(jsonData);
+            configLevelData = configArray.levelsArray[level-1];
+        }
+        else
+        {
+            Debug.LogError("Config file not found!");
+        }
     }
 
     private void LoadSceneInBackground(string sceneName)
@@ -30,7 +59,7 @@ public class MissionLoader : MonoBehaviour
         asyncLoad.allowSceneActivation = true;
         Destroy(this);
     }
-  private void Update()
+    private void Update()
     {
         Debug.Log(asyncLoad.progress);
         // Check if the scene is ready to be activated
@@ -39,4 +68,18 @@ public class MissionLoader : MonoBehaviour
             resumeButton.interactable = true;
         }
     }
+}
+
+[System.Serializable]
+public class ConfigLevelDataArray
+{
+    public ConfigLevelData[] levelsArray;
+}
+
+[System.Serializable]
+public class ConfigLevelData
+{
+    public string missionText;
+    public string imageName;
+    public string missionCount;
 }
