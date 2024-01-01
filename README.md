@@ -1,1 +1,1 @@
-![](pics/shop%20character.png)
+![](Pics/shop%20character.png)
